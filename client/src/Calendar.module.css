@@ -1,0 +1,70 @@
+.calendar {
+  /* background-color: paleturquoise; */
+  position: relative;
+}
+.center-container {
+  width: 420px;
+  margin: 22px auto 10px auto;
+  overflow: hidden;
+}
+.calendar ul {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+.calendar ul li {
+  flex: 0 0 52.5px;
+  text-align: center;
+}
+.calendar ul li .month {
+  height: 15px;
+  font-size: 10px;
+  margin-bottom: 7px;
+}
+.calendar ul li .day {
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Roboto", "Noto Sans KR", "dotum", "sans-serif";
+  /* border: 1px solid #000; */
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  line-height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.calendar ul li .day.active {
+  background-color: #000;
+  color: #fff;
+}
+.calendar ul li .day-of-week {
+  font-size: 12px;
+  margin-top: 10px;
+}
+.calendar ul li .red {
+  color: #f24a6a;
+}
+.calendar ul li .blue {
+  color: #233ca3;
+}
+
+.calendar .btn-arrow {
+  position: absolute;
+  top: 26px;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.calendar .btn-arrow span {
+  font-size: 24px;
+  color: #999;
+}
+.calendar .btn-arrow span:hover {
+  color: #666;
+}
+.btn-arrow.left {
+  left: 24px;
+}
+.btn-arrow.right {
+  right: 24px;
+}
