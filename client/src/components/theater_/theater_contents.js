@@ -8,7 +8,7 @@ class Theater_Contents extends Component {
             return (<List data={this.props.data} focus={this.props.focus} handleChange={this.props.handleChange} handleFocus={this.props.handleFocus}></List>);
         }
         else if (this.props.page === "detail") {
-            return (<Theater_detail />);
+            return (<Theater_detail selected_item={this.props.selected_item}/>);
         }
     }
 }

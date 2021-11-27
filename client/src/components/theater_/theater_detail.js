@@ -26,7 +26,7 @@ class Theater_detail extends Component {
 			</div>
 			<div class="col-md-8 col-sm-12 col-xs-12">
 				<div class="movie-single-ct main-content">
-					<h1 class="bd-hd">강남점</h1>
+					<h1 class="bd-hd">{this.props.selected_item.name}</h1>
 					<div class="social-btn">
 						<a href="#" class="parent-btn"><i class="ion-heart"></i>관심 극장에 추가</a>
 						<div class="hover-bnt">
@@ -57,7 +57,7 @@ class Theater_detail extends Component {
 						           <div class="row">
 						            	<div class="rv-hd">
 						            		<div class="div">
-							            		<h3>강남점</h3>
+							            		<h3>{this.props.selected_item.name}</h3>
 						       	 				<h2>상영시간표</h2>
 							            	</div>
 						            	</div>

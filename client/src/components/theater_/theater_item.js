@@ -14,9 +14,10 @@ class TheaterItem extends Component {
             <div class="movie-item-style-2">
                 <img src="images/uploads/mv1.jpg" alt=""></img>
                 <div class="mv-item-infor">
-                    <h6><a href="moviesingle_light.html" onClick={function(e){
+                    <h6><a id={view[i].id} href="/" onClick={function(e){
                         e.preventDefault();
-                        this.props.handleChange("detail");
+                        this.props.handleChange("detail", e.target.id);
+                        window.scrollTo(0, 0);
                     }.bind(this)}>{view[i].name}</a></h6>
                     <p class="describe">{view[i].desc}</p>
                     <p class="seats">{view[i].seat} 석</p>

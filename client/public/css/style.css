@@ -8477,9 +8477,9 @@ div.invalid-feedback {
 button.refresh_btn,
 button.refresh_btn::after {
   -webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
+  -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
-	transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 button.refresh_btn {
@@ -8489,7 +8489,7 @@ button.refresh_btn {
   color: #9575cd;
   display: block;
   font-size: 18px;
-  
+
   position: relative;
   text-transform: uppercase;
 }
@@ -8497,7 +8497,7 @@ button.refresh_btn {
 button.refresh_btn::before,
 button.refresh_btn::after {
   background: #fff;
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
 }

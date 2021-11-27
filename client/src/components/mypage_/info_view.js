@@ -9,7 +9,7 @@ class Info_view extends Component {
 							<div class="row">
 								<div class="col-md-6 form-it">
 									<label>성명</label>
-									<p>이동호</p>
+									<p>{this.props.username}</p>
 								</div>
 								<div class="col-md-6 form-it">
 									<label>이메일 주소</label>

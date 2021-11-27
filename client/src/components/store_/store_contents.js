@@ -4,8 +4,6 @@ import Ticket from './ticket';
 import Product from './product';
 import Store_details from './Store_details';
 
-
-
 class Store_Content extends Component {
   render(){
     if (this.props.in_detail) {

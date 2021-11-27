@@ -9,7 +9,7 @@ import OnetoOne from './onetoone';
 class Mp_Content extends Component {
     render() {
 		if (this.props.section === "info" && this.props.mode === "view") {
-			return (<Info_view onChangeSection={this.props.onChangeSection}></Info_view>);
+			return (<Info_view onChangeSection={this.props.onChangeSection} username={this.props.username}></Info_view>);
 		} else if (this.props.section === "info" && this.props.mode === "edit") {
 			return (<Info_edit onChangeSection={this.props.onChangeSection}></Info_edit>);
 		} else if (this.props.section === "change_pw") {
@@ -19,7 +19,7 @@ class Mp_Content extends Component {
 		} else if (this.props.section === "review_info") {
 			return (<Review_info/>);
 		} else if (this.props.section === "1:1") {
-			return (<OnetoOne/>)
+			return (<OnetoOne inquiry_data={this.props.inquiry_data}/>)
 		}
     }
 }

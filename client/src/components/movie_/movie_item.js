@@ -10,7 +10,7 @@ class MovieItem extends Component {
                         e.preventDefault();
                         this.props.onChangePage("movie_detail");
                     }.bind(this)}>
-                        예매하기 <i class="ion-android-arrow-dropright"></i>
+                        상세 정보 <i class="ion-android-arrow-dropright"></i>
                     </a>
                 </div>
                 <div class="mv-item-infor">

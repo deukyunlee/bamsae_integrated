@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
-import CommonTable from '../service_/table/CommonTable';
-import CommonTableRow from '../service_/table/CommonTableRow';
-import CommonTableColumn from '../service_/table/CommonTableColoumn';
+import Inquiry_item from './inquiry_item';
 
 class OnetoOne extends Component {
     render() {
+        var inquiries = this.props.inquiry_data;
+        var i;
+        var arr = [];
+        for (i=0; i<inquiries.length; i++) {
+            arr.push(<Inquiry_item name={inquiries[i].title} date={inquiries[i].date}></Inquiry_item>)
+        }
         return (
             <div class="form-style-1 user-pro" action="#">
                 <h3>문의 내역</h3><br/>
@@ -13,16 +17,7 @@ class OnetoOne extends Component {
                 <th>제목</th>
                 <th>등록일</th>
                 <th>답변상태</th>
-                <tr>
-                    <td>질문1</td>
-                    <td>2021-11-23</td>
-                    <td>미완료</td>
-                </tr>
-                <tr>
-                    <td>질문2</td>
-                    <td>2021-11-22</td>
-                    <td>답변완료</td>
-                </tr>
+                {arr}
                 </table>
                 </div>
 					</div>

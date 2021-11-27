@@ -11,25 +11,14 @@ class Footer extends Component {
       <div class="container">
         <div class="flex-parent-ft">
           <div class="flex-child-ft item1">
-            <a href="index.html"
+            <a href="/"
               ><img
                 width="500"
                 class="logo"
                 src="images/KakaoTalk_20211107_214306088_06.png"
                 alt=""
             /></a>
-            <table>
-              <th style={{color: 'darkgray', width: "80"}}>회원약관</th>
-              <th style={{color: 'darkgray', width: "80"}}>개인정보처리방침</th>
-              <th style={{color: 'darkgray', width: "130"}}>이메일무단수집거부</th>
-              <th style={{color: 'darkgray', width: "210"}}>
-                영상정보처리기기 운영 및 관리방침
-              </th>
-              <th style={{color: 'darkgray', width: "80"}}>채용안내</th>
-              <th style={{color: 'darkgray', width: "100"}}>광고/임대문의</th>
-              <th style={{color: 'darkgray', width: "80"}}>윤리경영</th>
-              <th style={{color: 'darkgray', width: "80"}}>기업정보</th>
-            </table>
+          
 
             <p>
               경기도 안산시 상록구<br />

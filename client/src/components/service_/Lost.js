@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-import CommonTable from './table/CommonTable';
-import CommonTableColumn from './table/CommonTableColoumn';
-import CommonTableRow from './table/CommonTableRow';
+
 
 class Lost extends Component {
     constructor(props) {
@@ -36,7 +34,7 @@ class Lost extends Component {
                                                             e.preventDefault();
                                                             this
                                                                 .props
-                                                                .onChangeDetail("Lost_form");
+                                                                .onChangeTab("Lost_form");
                                                         }.bind(this)}>
                                                             분실물 문의
                                                 </a>
@@ -49,43 +47,7 @@ class Lost extends Component {
                     </div>
                 </div>
                 <div>
-                    <CommonTable headersName={['번호', '극장', '제목', '접수상태', '등록일']}>
-                        <CommonTableRow>
-                            <CommonTableColumn>1</CommonTableColumn>
-                            <CommonTableColumn>강남점</CommonTableColumn>
-                            <CommonTableColumn>분실물 문의드립니다.</CommonTableColumn>
-                            <CommonTableColumn>답변완료</CommonTableColumn>
-                            <CommonTableColumn>2021-11-25</CommonTableColumn>
-                        </CommonTableRow>
-                        <CommonTableRow>
-                            <CommonTableColumn>2</CommonTableColumn>
-                            <CommonTableColumn>강남점</CommonTableColumn>
-                            <CommonTableColumn>분실물 문의드립니다.</CommonTableColumn>
-                            <CommonTableColumn>답변완료</CommonTableColumn>
-                            <CommonTableColumn>2021-11-25</CommonTableColumn>
-                        </CommonTableRow>
-                        <CommonTableRow>
-                            <CommonTableColumn>3</CommonTableColumn>
-                            <CommonTableColumn>강남점</CommonTableColumn>
-                            <CommonTableColumn>분실물 문의드립니다.</CommonTableColumn>
-                            <CommonTableColumn>답변완료</CommonTableColumn>
-                            <CommonTableColumn>2021-11-25</CommonTableColumn>
-                        </CommonTableRow>
-                        <CommonTableRow>
-                            <CommonTableColumn>4</CommonTableColumn>
-                            <CommonTableColumn>강남점</CommonTableColumn>
-                            <CommonTableColumn>분실물 문의드립니다.</CommonTableColumn>
-                            <CommonTableColumn>답변완료</CommonTableColumn>
-                            <CommonTableColumn>2021-11-25</CommonTableColumn>
-                        </CommonTableRow>
-                        <CommonTableRow>
-                            <CommonTableColumn>5</CommonTableColumn>
-                            <CommonTableColumn>강남점</CommonTableColumn>
-                            <CommonTableColumn>분실물 문의드립니다.</CommonTableColumn>
-                            <CommonTableColumn>답변완료</CommonTableColumn>
-                            <CommonTableColumn>2021-11-25</CommonTableColumn>
-                        </CommonTableRow>
-                    </CommonTable>
+                   
                 </div>
             </div>
         )

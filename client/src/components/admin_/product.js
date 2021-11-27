@@ -11,7 +11,7 @@ class Product extends Component {
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <h3>급여 관리</h3>
+                                        <h3>상품 관리</h3>
                                         <div class="flex-wrap-movielist mv-grid-fw">
                                         </div>
                                     </div>

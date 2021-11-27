@@ -50,13 +50,15 @@ class Reserve extends Component {
                     </div>
                 </div>
 
-                {!this.state.step1 ? <Reserve_select toStep1={function(){
+                {!this.props.is_logined && !this.state.step1 ? <Reserve_select toStep1={function(){
                     this.setState({
                         step1: true,
                     })
-                }.bind(this)}/> : <br/>}
+                }.bind(this)}
+                onChangePage={this.props.onChangePage}
+                /> : <br/>}
 	    
-                {this.state.step1 ? <Step1 data={this.state.data} getItems={function(arr){
+                {this.props.is_logined || this.state.step1 ? <Step1 data={this.state.data} getItems={function(arr){
                     this.setState({
                         selected_items : arr,
                     })

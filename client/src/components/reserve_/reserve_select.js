@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 
 class Reserve_select extends Component {
     render() {
@@ -14,7 +15,8 @@ class Reserve_select extends Component {
                     }.bind(this)}>비회원 예매</button>
                     <button onClick={function(e){
                         e.preventDefault();
-                        this.props.toStep1();
+                        window.scrollTo(0,0)
+                        this.props.onChangePage("login");
                     }.bind(this)}>회원으로 예매</button>
                 </div>
             </div>

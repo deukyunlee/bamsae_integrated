@@ -70,14 +70,6 @@ class Admin extends Component {
                                     href="#overview"
                                     onClick={function (e) {
                                         e.preventDefault();
-                                        this.setState({tab: "benefit_analysis", in_detail: false});
-                                    }.bind(this)}>수익 분석</a>
-                            </li>
-                            <li>
-                                <a
-                                    href="#overview"
-                                    onClick={function (e) {
-                                        e.preventDefault();
                                         this.setState({tab: "board", in_detail: false});
                                     }.bind(this)}>게시판 관리</a>
                             </li>
@@ -100,8 +92,12 @@ class Admin extends Component {
                         </ul>
                         <Admin_content
                             tab={this.state.tab}
-                             
-                            ></Admin_content>
+                              in_detail={this.state.in_detail} onChangeDetail={function(e){
+                                var det = this.state.in_detail;
+                                this.setState({
+                                    in_detail : !det
+                                });
+                            }.bind(this)}></Admin_content>
                     </div>
                 </div>} 
                 </div>

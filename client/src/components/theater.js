@@ -7,14 +7,16 @@ class Theater extends Component {
         this.state = {
             page: "list",
             focus: "seoul",
-            selected_item: "null",
+            selected_item: null,
             data: {
                 seoul: [
                     {
+                        id:0,
                         name: "강남점",
                         desc: "서울의 중심에 서다",
                         seat: 580
                     }, {
+                        id:1,
                         name: "이태원점",
                         desc: "젊음의 도시",
                         seat: 610
@@ -22,6 +24,7 @@ class Theater extends Component {
                 ],
                 gyeonggi: [
                     {
+                        id:2,
                         name: "안산점",
                         desc: "하냥이의 고향",
                         seat: 420
@@ -31,9 +34,17 @@ class Theater extends Component {
         }
     }
 
-    handleChange = (code) => {
+    handleChange = (code, id) => {
+        var theaters = Object.values(this.state.data);
+        var found;
+        for (const item of theaters) {
+            found = item.find(x => x.id === Number(id));
+            if (found !== undefined)
+                break;
+        }
         this.setState({
             page: code,
+            selected_item : found,
         });
     };
 
@@ -62,6 +73,7 @@ class Theater extends Component {
                     page={this.state.page}
                     focus={this.state.focus}
                     data={this.state.data}
+                    selected_item={this.state.selected_item}
                     handleChange={this.handleChange}
                     handleFocus={this.handleFocus}></Theater_Contents>
             </div>

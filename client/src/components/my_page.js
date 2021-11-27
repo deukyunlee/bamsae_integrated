@@ -17,7 +17,7 @@ class MyPage extends Component {
 		<div class="row">
 			<div class="col-md-12">
 				<div class="hero-ct">
-					<h1>이동호 님의 프로필</h1>
+					<h1>{this.props.username} 님의 프로필</h1>
 					<ul class="breadcumb">
 						<li>Lv.1</li>
                         <li><progress title="결제 금액 : 50000/150000" class="membership_exp" value="50000" max="150000"></progress></li>
@@ -90,6 +90,7 @@ class MyPage extends Component {
 			</div>
 			<div class="col-md-9 col-sm-12 col-xs-12">
 				<Mp_Content
+					username={this.props.username}
 					section={this.state.section}
 					mode={this.state.mode}
 					onChangeSection={function(code){
@@ -97,6 +98,7 @@ class MyPage extends Component {
                     		mode: code,
                 		});
             		}.bind(this)}
+					inquiry_data={this.props.inquiry_data}
 				></Mp_Content>
 			</div>
 		</div>

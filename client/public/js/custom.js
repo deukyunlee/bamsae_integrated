@@ -468,21 +468,21 @@ $(function(){
 	// 	});
     // });
     //pop up for signup form
-    signupLink.on('click', function(event){
-    	event.preventDefault();
-    	signupct.parents(overlay).addClass("openform");
-		$(document).on('click', function(e){
-		var target = $(e.target);
-		if ($(target).hasClass("overlay")){
-				$(target).find(signupct).each( function(){
-					$(this).removeClass("openform");
-				});
-				setTimeout( function(){
-					$(target).removeClass("openform");
-				}, 350);
-			}	
-		});
-    });
+    // signupLink.on('click', function(event){
+    // 	event.preventDefault();
+    // 	signupct.parents(overlay).addClass("openform");
+	// 	$(document).on('click', function(e){
+	// 	var target = $(e.target);
+	// 	if ($(target).hasClass("overlay")){
+	// 			$(target).find(signupct).each( function(){
+	// 				$(this).removeClass("openform");
+	// 			});
+	// 			setTimeout( function(){
+	// 				$(target).removeClass("openform");
+	// 			}, 350);
+	// 		}	
+	// 	});
+    // });
     // close popup for mobile
     var closebt = $(".close");
    	closebt.on('click', function(e){
