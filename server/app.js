@@ -66,6 +66,29 @@ app.use('/node_modules', express.static(path.join(__dirname + '/node_modules')))
 
 
 // Router 연결
+var movieSearch = require('./router/movieSearch');
+var store = require('./router/store');
+var movie = require('./router/movie');
+var theater = require('./router/theater')
+var movieHistory = require('./router/movieHistory');
+var point = require('./router/point');
+var fastTicket = require('./router/fastTicket');
+var memWish = require('./router/memWish');
+var movieSchedule = require('./router/movieSchedule');
+var kakaoPay = require('./router/kakaopay');
+var paySuccess = require('./router/paySuccess');
+var result = require('./router/result');
+var memberView = require('./router/memberView');
+var question = require('./router/question');
+var platform = require('./router/platform');
+
+var movieSearch = require('./router/movieSearch.js');
+var store = require('./router/store.js');
+var movie = require('./router/movie.js');
+var theater = require('./router/theater.js');
+var memberView = require('./router/memberView.js');
+var memReview = require('./router/memReview.js');
+
 var main = require('./router/main.js');
 var memLogin = require('./router/memLogin.js');
 var memJoin = require('./router/memJoin.js');
@@ -81,6 +104,25 @@ var theaterSchedule = require('./router/theaterSchedule.js');
 var memBoard = require('./router/memBoard.js');
 var memInfo = require('./router/memInfo.js');
 
+app.use('/memLogin', memLogin);
+app.use('/movieSearch', movieSearch);
+app.use('/store', store);
+app.use('/movie', movie);
+app.use('/theater',theater);
+app.use('/movieHistory', movieHistory);
+app.use('/point', point);
+app.use('/fastTicket', fastTicket);
+app.use('/memWish', memWish);
+app.use('/movieSchedule',movieSchedule);
+app.use('/kakaoPay',kakaoPay);
+app.use('/paySuccess',paySuccess);
+app.use('/result',result);
+app.use('/memberView',memberView);
+app.use('/question',question); 
+app.use('/platform',platform); 
+app.use('/memReview',memReview); 
+
+
 app.use('/', main);
 app.use('/memLogin', memLogin);
 app.use('/memJoin', memJoin);
@@ -92,7 +134,7 @@ app.use('/theater/stock', theaterStock);
 app.use('/theater/emp', theaterEmp);
 app.use('/theater/dil', theaterDil);
 app.use('/theater/sal', theaterSalary);
-app.use('/theater/sched', theaterSchedule);
+app.use('/theater/sched', theaterSchedule)
 app.use('/memBoard', memBoard);
 app.use('/memInfo', memInfo);
 
