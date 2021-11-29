@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import Store_Content from './store_/store_contents';
 
+
+
 class Store extends Component {
     constructor(props) {
         super(props);

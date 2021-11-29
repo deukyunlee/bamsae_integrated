@@ -10,6 +10,10 @@ const session = require('express-session');
 const bodyParser = require('body-parser');
 
 
+const cors = require('cors')();
+app.use(cors);
+
+
 // .env에서 db 서버 credential 가져오기
 require('dotenv').config()
 
@@ -70,14 +74,14 @@ var movieSearch = require('./router/movieSearch');
 var store = require('./router/store');
 var movie = require('./router/movie');
 var theater = require('./router/theater')
-var movieHistory = require('./router/movieHistory');
-var point = require('./router/point');
-var fastTicket = require('./router/fastTicket');
-var memWish = require('./router/memWish');
-var movieSchedule = require('./router/movieSchedule');
-var kakaoPay = require('./router/kakaopay');
-var paySuccess = require('./router/paySuccess');
-var result = require('./router/result');
+// var movieHistory = require('./router/movieHistory');
+// var point = require('./router/point');
+// var fastTicket = require('./router/fastTicket');
+// var memWish = require('./router/memWish');
+// var movieSchedule = require('./router/movieSchedule');
+// var kakaoPay = require('./router/kakaopay');
+// var paySuccess = require('./router/paySuccess');
+// var result = require('./router/result');
 var memberView = require('./router/memberView');
 var question = require('./router/question');
 var platform = require('./router/platform');
@@ -109,14 +113,14 @@ app.use('/movieSearch', movieSearch);
 app.use('/store', store);
 app.use('/movie', movie);
 app.use('/theater',theater);
-app.use('/movieHistory', movieHistory);
-app.use('/point', point);
-app.use('/fastTicket', fastTicket);
-app.use('/memWish', memWish);
-app.use('/movieSchedule',movieSchedule);
-app.use('/kakaoPay',kakaoPay);
-app.use('/paySuccess',paySuccess);
-app.use('/result',result);
+// app.use('/movieHistory', movieHistory);
+// app.use('/point', point);
+// app.use('/fastTicket', fastTicket);
+// app.use('/memWish', memWish);
+// app.use('/movieSchedule',movieSchedule);
+// app.use('/kakaoPay',kakaoPay);
+// app.use('/paySuccess',paySuccess);
+// app.use('/result',result);
 app.use('/memberView',memberView);
 app.use('/question',question); 
 app.use('/platform',platform); 

@@ -5,9 +5,9 @@ import TableHead from '@material-ui/core/TableHead';
 import TableBody from '@material-ui/core/TableBody';
 import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
+import axios from 'axios'
 
 class Faq extends Component {
-
     render() {
         const styletext={
             textAlign: 'center',

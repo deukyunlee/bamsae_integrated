@@ -24,7 +24,7 @@ router.get('/1to1', (req, res) => {
 
 //1:1문의 회원별로 전체 보기 (회원)
 router.get('/1to1Mem', (req, res) => {
-    const mem_id = 'abc'//req.session.mem_id;
+    const mem_id = req.session.mem_id;
     db.query(`select qna_id,mem_id,date_format(qna_date,'%Y-%m-%d') as qna_date ,qna_title,qna_content,if(qna_category = 1,"분실물문의","대관문의") as qna_category ,if(is_completed=1,'O','X') as is_completed from qna where mem_id = ? `, [mem_id] , (err, data) => {
         if (data == undefined) {
             res.send({ "status": false });
@@ -66,7 +66,7 @@ router.post('/new', (req, res) => {
     const qna_content = req.body.qna_content;
     const qna_category = req.body.qna_category;
     const contact_way = req.body.contact_way;
-    const mem_id = 'abc' //req.session.mem_id;
+    const mem_id = req.session.mem_id;
 
     db.query(`INSERT INTO qna(mem_id,qna_date,qna_title,qna_content,qna_category,is_completed,contact_way)
     VALUES(?,now(),?,?,?,1,?);`, [mem_id,qna_title,qna_content,qna_category,contact_way], (err, data) => {
