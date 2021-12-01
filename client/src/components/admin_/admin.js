@@ -7,7 +7,7 @@ class Admin extends Component {
         super(props);
         this.state = {
             is_logined : false,
-            tab: "sales",
+            tab: "theater",
             in_detail: false,
         };
     }
