@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react"
 
 class Review_info extends Component {
     render() {
@@ -61,4 +61,4 @@ class Review_info extends Component {
     }
 }
 
-export default Review_info;
+export default Review_info

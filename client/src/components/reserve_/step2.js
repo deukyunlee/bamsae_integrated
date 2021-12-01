@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import Select_seat from './seat/select_seat';
 
 class Step2 extends Component {

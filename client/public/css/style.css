@@ -1186,18 +1186,13 @@ input[type="color"],
   background-color: #fff;
   background-image: none;
   border: 1px solid #aaa;
-  -webkit-transition: border-color ease-in-out 0.15s,
-    box-shadow ease-in-out 0.15s;
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-  -webkit-transition: border-color ease-in-out 0.15s,
-    box-shadow ease-in-out 0.15s 0.3s ease-out;
-  -moz-transition: border-color ease-in-out 0.15s,
-    box-shadow ease-in-out 0.15s 0.3s ease-out;
-  -o-transition: border-color ease-in-out 0.15s,
-    box-shadow ease-in-out 0.15s 0.3s ease-out;
-  transition: border-color ease-in-out 0.15s,
-    box-shadow ease-in-out 0.15s 0.3s ease-out;
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s 0.3s ease-out;
+  -moz-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s 0.3s ease-out;
+  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s 0.3s ease-out;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s 0.3s ease-out;
 }
 select:focus,
 textarea:focus,
@@ -2445,12 +2440,9 @@ tbody.collapse.in {
   padding: 10px 15px;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1),
-    0 1px 0 rgba(255, 255, 255, 0.1);
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1),
-    0 1px 0 rgba(255, 255, 255, 0.1);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1),
-    0 1px 0 rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   margin-top: 8px;
   margin-bottom: 8px;
 }
@@ -5200,8 +5192,7 @@ ul {
   text-transform: none;
   border: none;
   height: 40px;
-  background: url("../images/uploads/search-bgsb.png") no-repeat right 20px
-    center;
+  background: url("../images/uploads/search-bgsb.png") no-repeat right 20px center;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -6249,12 +6240,7 @@ ul {
   justify-content: flex-start;
   align-items: inherit;
 }
-.movie-single
-  .movie-single-ct
-  .tab.review
-  .mv-user-review-item
-  .user-infor
-  img {
+.movie-single .movie-single-ct .tab.review .mv-user-review-item .user-infor img {
   margin-right: 30px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -7706,25 +7692,13 @@ p.ceb-single {
 .buster-light .movie-single .movie-single-ct .mvcast-item .cast-it a:hover {
   color: #dd003f;
 }
-.buster-light
-  .movie-single
-  .movie-single-ct
-  .mvcast-item
-  .cast-it
-  .series-it
-  a {
+.buster-light .movie-single .movie-single-ct .mvcast-item .cast-it .series-it a {
   color: #020d18;
 }
 .buster-light .movie-single .movie-single-ct .mvsingle-item .vd-infor h6 a {
   color: #020d18;
 }
-.buster-light
-  .movie-single
-  .movie-single-ct
-  .mvsingle-item
-  .vd-item:hover
-  h6
-  a {
+.buster-light .movie-single .movie-single-ct .mvsingle-item .vd-item:hover h6 a {
   color: #dd003f;
 }
 .buster-light .movie-single .movie-single-ct .tab h3 {
@@ -8007,12 +7981,7 @@ header .navbar-default .navbar-nav .dropdown .dropdown-menu.level1 {
   padding-bottom: 20px;
   left: -15px;
 }
-header
-  .navbar-default
-  .navbar-nav
-  .dropdown
-  .dropdown-menu.level1
-  .dropdown-toggle {
+header .navbar-default .navbar-nav .dropdown .dropdown-menu.level1 .dropdown-toggle {
   display: flex;
   justify-content: space-between;
 }
@@ -8250,21 +8219,10 @@ header#headerv3-light {
     color: #abb7c4;
     padding: 10px 15px;
   }
-  header
-    .navbar-default
-    .navbar-nav
-    .dropdown.first.open
-    .dropdown-menu
-    li:hover {
+  header .navbar-default .navbar-nav .dropdown.first.open .dropdown-menu li:hover {
     background-color: #0f2133;
   }
-  header
-    .navbar-default
-    .navbar-nav
-    .dropdown.first.open
-    .dropdown-menu
-    li:hover
-    a {
+  header .navbar-default .navbar-nav .dropdown.first.open .dropdown-menu li:hover a {
     color: #9575cd;
   }
   header .menu-left {
@@ -8523,3 +8481,22 @@ div.form-style-1 {
 #final-purchase {
   margin: 0 auto;
 }
+/*step4 버튼 작업*/
+/****************/
+.button_step4 {
+  margin: 30px;
+  width: 100px;
+  height: 100px;
+}
+
+.button_nextto_paragraph {
+  margin: 10px;
+  width: 30px;
+  height: 10px;
+}
+
+.button_event_arrow {
+  width: 20px;
+  height: 20px;
+}
+/************************/
