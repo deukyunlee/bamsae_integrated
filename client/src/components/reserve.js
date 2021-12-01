@@ -6,32 +6,6 @@ import Step3 from "./reserve_/step3"
 import Step4 from "./reserve_/step4"
 
 class Reserve extends Component {
-<<<<<<< HEAD
-    constructor(props) {
-        super(props);
-        this.state = {
-            step1: false,
-            step3 : false,
-            step4 : false,
-            data : [
-                {
-                    id: 0,
-                    name: "이터널스",                    
-                },
-                {
-                    id: 1,
-                    name: "베놈2",
-                },
-                {
-                    id: 2,
-                    name: "어바웃타임",
-                }
-            ],
-            selected_items : [],
-            ticket : [],
-            selected_seats : [],
-        };
-=======
   constructor(props) {
     super(props)
     this.state = {
@@ -54,7 +28,6 @@ class Reserve extends Component {
       ],
       selected_items: [],
       ticket: [],
->>>>>>> 7414cbe04c9843ccf160539a9bae7a7f02b93c58
     }
   }
 
@@ -82,50 +55,6 @@ class Reserve extends Component {
           </div>
         </div>
 
-<<<<<<< HEAD
-                {!this.props.is_logined && !this.state.step1 ? <Reserve_select toStep1={function(){
-                    this.setState({
-                        step1: true,
-                    })
-                }.bind(this)}
-                onChangePage={this.props.onChangePage}
-                /> : <br/>}
-	    
-                {this.props.is_logined || this.state.step1 ? <Step1 data={this.state.data} getItems={function(arr){
-                    this.setState({
-                        selected_items : arr,
-                    })
-                }.bind(this)}
-                selected_items={this.state.selected_items}
-                /> : <div/>}
-                {this.state.selected_items.length > 0 ? <Step2 selected_items={this.state.selected_items}
-                toStep3={function(){
-                    this.setState({
-                        step3: true,
-                    })
-                }.bind(this)}
-                getSelected={function(arr){
-                    this.setState({
-                        selected_seats : arr,
-                    })
-                }.bind(this)}></Step2> : <br/>}
-                {this.state.step3 ? <Step3 getCount={function(arr){
-                    this.setState({
-                        ticket : arr
-                    })
-                }.bind(this)}
-                toStep4={function(){
-                    this.setState({
-                        step4: true,
-                    })
-                }.bind(this)}
-                limit={this.state.selected_seats.length}
-                /> : <br/>}
-                {this.state.step4 ? <Step4 ticket={this.state.ticket} selected_seats={this.state.selected_seats}/> : <br/>}
-	</div>
-        );
-    }
-=======
         {!this.props.is_logined && !this.state.step1 ? (
           <Reserve_select
             toStep1={function () {
@@ -184,7 +113,6 @@ class Reserve extends Component {
       </div>
     )
   }
->>>>>>> 7414cbe04c9843ccf160539a9bae7a7f02b93c58
 }
 
 export default Reserve
