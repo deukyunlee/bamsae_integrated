@@ -2,22 +2,28 @@
 
 class Board extends Component {
     categoryChange(e) {
-        var good_a = ["강남", "신촌", "마포"];
-        var good_b = ["빅토리아", "엠버", "루나", "크리스탈"];
-        var good_c = ["LE", "하니", "정화", "혜린", "솔지"];
+        var good_a = ["강남", "신촌", "마포", "강변", "건대입구", "구로", "대학로", "동대문", "명동", "목동", "미아", "상봉", "수유", "송파"];
+        var good_b = ["고양", "광교", "동탄", "안산", "하남", "평택", "안성", "동수원", "수원", "북수원", "화성"];
         var target = document.getElementById("theater");
 
         if (e == "a") var d = good_a;
         else if (e == "b") var d = good_b;
-        else if (e == "c") var d = good_c;
 
         target.options.length = 0;
-        //d.forEach(x => {
-        //    var opt = document.createElement("option");
-        //    opt.value = d[x];
-        //    opt.innerHTML = d[x];
-        //    target.appendChild(opt);
-        //})
+        d.forEach(x => {
+            var opt = document.createElement("option");
+            opt.value = x;
+            opt.innerHTML = x;
+            target.appendChild(opt);
+        })
+    }
+
+    theaterChange(e) {
+        console.log(e)
+
+        if (e == "강남") {
+            document.all["location"].text = "강남"
+        }
     }
 
     render() {
@@ -36,11 +42,11 @@ class Board extends Component {
                                     <div class="row">
                                         <div class="col-md-12 col-sm-12 col-xs-12">
                                             <h3>극장 관리</h3>
-                                            <div><br></br>
+                                            <br></br>
                                                 <select onChange={function (e) {
                                                     this.categoryChange(e.target.value);
                                                 }.bind(this)}>
-                                                <option>지역</option>
+                                                <option value="">지역 선택</option>
                                                 <option value="a">서울</option>
                                                 <option value="b">경기</option>
                                                 <option value="c">인천</option>
@@ -52,10 +58,62 @@ class Board extends Component {
                                                 <option>광주/전라/제주</option>
 
                                             </select>
-                                            <select id="theater">
+                                            <select id="theater" onChange={function (e) {
+                                                this.theaterChange(e.target.value);
+                                            }.bind(this)}>
                                                 <option value="">지점</option>
-                                                </select>
-                                                </div>
+                                            </select>
+
+                                            <br></br><br></br>
+                                            <div class="form-style-1 user-pro" action="#">
+                                                <form action="#" id="info">
+                                                    <h5>극장 정보</h5><br></br>
+                                                    <div class="row">
+                                                        <div class="col-md-6 form-it">
+                                                            <label>극장 위치</label>
+                                                            <p id="location" text="위치"></p>
+                                                        </div>
+                                                        <div class="col-md-6 form-it">
+                                                            <label>극장 소개</label>
+                                                            <p value="intro">소개</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6 form-it">
+                                                            <label>극장 전화번호</label>
+                                                            <p>전화번호</p>
+                                                        </div>
+                                                        <div class="col-md-6 form-it">
+                                                            <label>주소</label>
+                                                            <p>ㅇ</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-2">
+                                                            <input
+                                                                class="submit"
+                                                                type="submit"
+                                                                value="수정"
+                                                                onClick={function (e) {
+                                                                    e.preventDefault()
+                                                                    this.props.onChangeSection("edit")
+                                                                }.bind(this)}
+                                                            ></input>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+
+                                            <br></br>
+                                            <h5>극장 게시판</h5>
+
+                                            <br></br>
+                                            <h5>극장 직원</h5>
+
+                                            <br></br>
+                                            <h5>극장 매출</h5>
+
                                             <div class="flex-wrap-movielist mv-grid-fw"></div>
                                         </div>
                                     </div>

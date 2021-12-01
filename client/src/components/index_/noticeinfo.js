@@ -10,10 +10,10 @@ class NoticeInfo extends Component {
         <div class="tabs">
           <ul class="tab-links">
             <li class="active">
-              <a href="#tab1">전체공지</a>
+              <a href="#tab1">전체 공지</a>
             </li>
             <li>
-              <a href="#tab2"> 극장공지</a>
+              <a href="#tab2"> 극장 공지</a>
             </li>
           </ul>
           <div class="event-table">
@@ -26,30 +26,30 @@ class NoticeInfo extends Component {
               <tr>
                 <td>1</td>
                 <td>강남</td>
-                <td>공지</td>
-                <td>극장이용안내</td>
+                <td>극장</td>
+                <td>극장 이용가능 시간 안내</td>
                 <td>2021.11.8</td>
               </tr>
               <tr>
                 <td>2</td>
-                <td>강남</td>
-                <td>공지</td>
-                <td>극장이용안내</td>
-                <td>2021.11.8</td>
+                <td>부산</td>
+                <td>극장</td>
+                <td>휴점 안내</td>
+                <td>2021.11.15</td>
               </tr>
               <tr>
                 <td>3</td>
-                <td>강남</td>
-                <td>공지</td>
-                <td>극장이용안내</td>
-                <td>2021.11.8</td>
+                <td></td>
+                <td>전체</td>
+                <td>방역지침 관련 안내드립니다.</td>
+                <td>2021.11.21</td>
               </tr>
               <tr>
                 <td>4</td>
-                <td>강남</td>
-                <td>공지</td>
-                <td>극장이용안내</td>
-                <td>2021.11.8</td>
+                <td>광교</td>
+                <td>극장</td>
+                <td>광교 개점 이벤트</td>
+                <td>2021.12.2</td>
               </tr>
             </table>
           </div>

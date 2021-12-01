@@ -14,7 +14,7 @@ class Service_content extends Component {
       return (<Faq onChangeDetail={this.props.onChangeDetail} upData={this.props.upData}></Faq>);
     }
     else if(this.props.tab === "Notice"){
-      return(<Notice></Notice>)
+        return (<Notice onChangeDetail={this.props.onChangeDetail} upData={this.props.upData}></Notice>)
     }
     else if(this.props.tab === "Inquiry"){
       return(<Inquiry onChangeTab={this.props.onChangeTab} inquiry_data={this.props.inquiry_data} addInquiryData={this.props.addInquiryData}></Inquiry>)
