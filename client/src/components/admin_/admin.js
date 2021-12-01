@@ -54,8 +54,16 @@ class Admin extends Component {
                                     href="#overview"
                                     onClick={function (e) {
                                         e.preventDefault();
+                                        this.setState({tab: "theater", in_detail: false});
+                                    }.bind(this)}>극장 관리</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#overview"
+                                    onClick={function (e) {
+                                        e.preventDefault();
                                         this.setState({tab: "sales", in_detail: false});
-                                    }.bind(this)}>매출현황</a>
+                                    }.bind(this)}>매출 현황</a>
                             </li>
                             <li>
                                 <a
