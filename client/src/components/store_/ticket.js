@@ -1,17 +1,9 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 
 class Ticket extends Component {
-    getProduct = async () => {
-        const products = await axios.get("http://localhost:5000/store?product_type=1");
-        console.log(products.data.data)
-    }
-    componentDidMount() {
-        this.getProduct();
-    }
-    render() {
-        return (
-            <div class="tab-content">
+  render() {
+    return(
+       <div class="tab-content">
                 <div id="overview" class="tab active">
                     <div class="row">
                         <div class="col-md-8 col-sm-12 col-xs-12">
@@ -21,7 +13,7 @@ class Ticket extends Component {
                                         <h3>관람권</h3>
                                         <div class="flex-wrap-movielist mv-grid-fw">
                                             <div class="movie-item-style-2 movie-item-style-1">
-                                                <img src="/images/006.png" alt="" />
+                                                <img src="/images/006.png" alt=""/>
                                                 <div class="hvr-inner">
                                                     <a
                                                         href="index.html"
@@ -44,7 +36,7 @@ class Ticket extends Component {
                                                 <span>11000원</span>
                                             </div>
                                             <div class="movie-item-style-2 movie-item-style-1">
-                                                <img src="/images/007.png" alt="" />
+                                                <img src="/images/007.png" alt=""/>
                                                 <div class="hvr-inner">
                                                     <a
                                                         href="index.html"
@@ -64,7 +56,7 @@ class Ticket extends Component {
                                                     </h6>
                                                     <span>일반관람권 2매</span>
                                                 </div>
-                                                <span>22000원</span>
+                                                    <span>22000원</span>
                                             </div>
                                         </div>
                                     </div>
@@ -74,8 +66,7 @@ class Ticket extends Component {
                     </div>
                 </div>
             </div>
-        )
-    }
-}
+    )
+  }}
 
-export default Ticket;
+    export default Ticket;

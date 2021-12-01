@@ -1,14 +1,6 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 
 class Product extends Component {
-    getProduct = async() => {
-        const products = await axios.get("http://localhost:5000/store?product_type=3");
-        console.log(products.data.data)
-      }
-    componentDidMount() {
-        this.getProduct();
-      }
   render() {
     return(
        <div class="tab-content">

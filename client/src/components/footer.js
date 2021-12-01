@@ -19,7 +19,6 @@ class Footer extends Component {
                 alt=""
             /></a>
           
-
             <p>
               경기도 안산시 상록구<br />
               한양대학로 55

@@ -1,15 +1,7 @@
 import React, { Component } from 'react';
 import Inquiry_item from './inquiry_item';
-import axios from 'axios'
 
 class OnetoOne extends Component {
-    axiosAPI = async () => {
-        const products = await axios.get("http://localhost:5000/question/1to1Mem");
-        console.log(products.data)
-    }
-    componentDidMount() {
-        this.axiosAPI();
-    }
     render() {
         var inquiries = this.props.inquiry_data;
         var i;

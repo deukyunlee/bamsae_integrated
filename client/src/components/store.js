@@ -1,14 +1,11 @@
 import React, {Component} from 'react';
 import Store_Content from './store_/store_contents';
 
-
-
 class Store extends Component {
     constructor(props) {
         super(props);
         this.state = {
             tab : "snack",
-            in_detail : false,
         }
     }
     render() {
@@ -65,11 +62,10 @@ class Store extends Component {
                                     }.bind(this)}>상품</a>
                                 </li>
                             </ul>
-                            <Store_Content tab={this.state.tab} in_detail={this.state.in_detail} onChangeDetail={function(e){
-                                var det = this.state.in_detail;
+                            <Store_Content tab={this.state.tab} onChangeTab={function(code){
                                 this.setState({
-                                    in_detail : !det
-                                });
+                                    tab: code,
+                                })
                             }.bind(this)}></Store_Content>
                         </div>
                     </div>

@@ -1,25 +1,17 @@
-import React, { Component } from 'react';
-import axios from 'axios'
+import React, {Component} from 'react';
 
 class Inquiry extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            type: "rent",
+            type : "rent",
         }
     }
 
-    axiosAPI = async () => {
-        const products = await axios.post("http://localhost:5000/question/new");
-        console.log(products.data)
-    }
-    componentDidMount() {
-        this.axiosAPI();
-    }
     isAllItemsFilled = () => {
         const inputFeilds = document.getElementsByTagName("input");
-        var i = 4;
-        for (i; i < inputFeilds.length; i++) {
+        var i= 4;
+        for (i; i<inputFeilds.length; i++) {
             if (inputFeilds[i].value === "") {
                 alert("모든 항목을 입력해주세요");
                 return false;
@@ -49,7 +41,7 @@ class Inquiry extends Component {
         var month = ('0' + (today.getMonth() + 1)).slice(-2);
         var day = ('0' + today.getDate()).slice(-2);
 
-        var dateString = year + '-' + month + '-' + day;
+        var dateString = year + '-' + month  + '-' + day;
         data.push({
             name: name_,
             e_mail: e_mail_,
@@ -63,7 +55,7 @@ class Inquiry extends Component {
     }
 
     render() {
-        const styleform = {
+         const styleform = {
             width: '1300px',
             left: '40px',
         }
@@ -97,29 +89,29 @@ class Inquiry extends Component {
                         </div>
                     </div>
                 </div>
-                <br />
+                <br/>
                 <div style={styleform} class="col-md-6 col-sm-12 col-xs-12">
                     <div class="sidebar">
                         <div class="searh-form">
                             <form class="form-style-1" action="#">
-
+                                
                                 <div class="row">
-                                    <div class="col-md-8 form-it">
                                         <div class="col-md-8 form-it">
+                                    <div class="col-md-8 form-it">
                                             <div class="row">
                                                 <div class="col-md-6 form-it">
                                                     <label>이름</label>
                                                     <input id="name" type="text" placeholder="이름 입력"></input>
                                                 </div>
-                                                <div
-                                                    class="col-md-6 form-it">
+                                                <div 
+                                                class="col-md-6 form-it">
                                                     <label>이메일</label>
                                                     <input id="e_mail" type="text" placeholder="이메일 입력"></input>
                                                 </div>
-                                                <div class="col-md-12 form-it">
+                                               <div class="col-md-12 form-it">
                                                     <label>핸드폰번호</label>
-                                                    <input
-                                                        id="hp" type="text" placeholder="핸드폰번호 입력"></input>
+                                                    <input 
+                                                    id="hp" type="text" placeholder="핸드폰번호 입력"></input>
                                                 </div>
                                             </div>
                                             <label>문의 종류</label>
@@ -137,19 +129,19 @@ class Inquiry extends Component {
                                     <div class="col-md-12 form-it">
                                         <label>제목</label>
                                         <input id="title" type="text" placeholder="제목을 입력하세요."></input>
-                                        <br />
+                                        <br/>
                                         <label>문의 내용</label>
                                         <input id="content" style={styleinput} type="text" placeholder="문의 내용을 입력하세요."></input>
                                     </div>
                                     <div class="col-md-12 ">
-                                        <input class="submit" type="submit" value="등록" onClick={function (e) {
+                                        <input class="submit" type="submit" value="등록" onClick={function(e){
                                             e.preventDefault();
                                             if (!this.isAllItemsFilled()) {
                                                 return;
                                             }
                                             this.submitData();
                                             this.props.onChangeTab("submit_sucess");
-                                            window.scrollTo(0, 0);
+                                            window.scrollTo(0,0);
                                         }.bind(this)}></input>
                                     </div>
                                 </div>

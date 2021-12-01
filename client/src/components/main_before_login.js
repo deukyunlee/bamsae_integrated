@@ -3,16 +3,8 @@ import Movie_slider from './index_/Slider_movieitem';
 import Movieinfo from './index_/movieinfo';
 import Event from './index_/Event';
 import NoticeInfo from './index_/noticeinfo';
-import axios from 'axios'
 
 class Main_A extends Component {
-  axiosAPI = async () => {
-    const products = await axios.get("http://localhost:5000/movieSearch?movie_title=이터널스");
-    console.log(products.data.data[0])
-}
-componentDidMount() {
-    this.axiosAPI();
-}
     render() {
         return (
             <div>

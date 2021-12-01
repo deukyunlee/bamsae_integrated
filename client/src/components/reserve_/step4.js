@@ -43,7 +43,7 @@ class Step4 extends Component {
 								
 								<div class="col-md-6">
 									<label>좌석</label>
-                                    <p>C8, C9, C10, C11</p>
+                                    <p>{this.props.selected_seats.join(" , ")}</p>
 								</div>
 							</div>
 						</form>

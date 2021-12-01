@@ -7,10 +7,19 @@ render() {
   
 return (
 <TableRow>
-<TableCell>{this.props.id}</TableCell>
+<TableCell
+style={{
+  textAlign: "center"
+}}>{this.props.id}</TableCell>
 <TableCell><img src={this.props.image} alt="profile"/></TableCell>
-<TableCell>{this.props.name}</TableCell>
-<TableCell>{this.props.date}</TableCell>
+<TableCell
+style={{
+  textAlign: "center"
+}}>{this.props.name}</TableCell>
+<TableCell
+style={{
+  textAlign: "center"
+}}>{this.props.date}</TableCell>
 
 </TableRow>
 )

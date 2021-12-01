@@ -1,11 +1,12 @@
 import { Component } from 'react';
-import Reserve_Moviegrid from './reserve_moviegrid';
+import Select_seat from './seat/select_seat';
 
 class Step2 extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			filled : [],
+			theater_selected: false,
 		}
 	}
 
@@ -111,10 +112,15 @@ class Step2 extends Component {
 									<input class="submit" type="submit" value="submit" onClick={function(e){
                                         e.preventDefault();
 										if (this.checkLast())
-                                        	this.props.toStep3();
+                                        	this.setState({
+												theater_selected: true,
+											})
                                     }.bind(this)}></input>
 								</div>
-								<div>좌석 선택 미구현</div>
+								<div class='col-md-12'>
+								<br/>
+								{this.state.theater_selected ? <Select_seat toStep3={this.props.toStep3} getSelected={this.props.getSelected}></Select_seat> : <div/> }
+								</div>
 							</div>
 						</form>
 					</div>

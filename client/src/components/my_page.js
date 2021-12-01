@@ -56,7 +56,6 @@ class MyPage extends Component {
 									mode: "view",
 								})
 							}.bind(this)}>예매 내역</a></li>
-							<li><a href="userrate.html">MY 무비 로그</a></li>
 							<li><a href="#" onClick={function(e){
 								e.preventDefault();
 								this.setState({

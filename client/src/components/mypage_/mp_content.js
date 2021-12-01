@@ -11,7 +11,7 @@ class Mp_Content extends Component {
 		if (this.props.section === "info" && this.props.mode === "view") {
 			return (<Info_view onChangeSection={this.props.onChangeSection} username={this.props.username}></Info_view>);
 		} else if (this.props.section === "info" && this.props.mode === "edit") {
-			return (<Info_edit onChangeSection={this.props.onChangeSection}></Info_edit>);
+			return (<Info_edit onChangeSection={this.props.onChangeSection} username={this.props.username}></Info_edit>);
 		} else if (this.props.section === "change_pw") {
 			return (<Change_PW></Change_PW>);
 		} else if (this.props.section === "reserve_info") {

@@ -6,7 +6,7 @@ class Step3 extends Component {
         var youth_ = document.getElementById("count_Y").value;
         var children_ = document.getElementById("count_C").value;
         var welfare_ = document.getElementById("count_W").value;
-        var arr = []
+        var arr = [];
         arr.push({
             adult : adult_,
             youth : youth_,
@@ -17,6 +17,10 @@ class Step3 extends Component {
         var sum = 0;
         for (const i of temp) {
             sum += i;
+        }
+        if (sum > this.props.limit) {
+            alert("좌석 수를 초과해서 선택할 수 없습니다.");
+            return false;
         }
         if (sum > 0) {
             this.props.getCount(arr);

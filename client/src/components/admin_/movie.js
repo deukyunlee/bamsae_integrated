@@ -54,10 +54,26 @@ class Movie extends Component {
                         <Table>
                             <TableHead>
                                 <TableRow>
-                                    <TableCell>번호</TableCell>
-                                    <TableCell style={styleimage}>포스터</TableCell>
-                                    <TableCell>영화 이름</TableCell>
-                                    <TableCell>상영예정일</TableCell>
+                                    <TableCell
+                                    style={{
+                                            width: 100,
+                                            textAlign: "center"
+                                        }}>번호</TableCell>
+                                    <TableCell style={styleimage}
+                                    style={{
+                                            width: 200,
+                                            textAlign: "center"
+                                        }}>포스터</TableCell>
+                                    <TableCell
+                                    style={{
+                                            width: 500,
+                                            textAlign: "center"
+                                        }}>영화 이름</TableCell>
+                                    <TableCell
+                                    style={{
+                                            width: 500,
+                                            textAlign: "center"
+                                        }}>상영예정일</TableCell>
                                 </TableRow>
                             </TableHead>
                             <TableBody>
