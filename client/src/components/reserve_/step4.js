@@ -45,8 +45,30 @@ class Step4 extends Component {
                 </div>
               </div>
             </form>
-            <button class="kakaopay" type="button" onClick={function (e) {}}>
+            <div>
+              <p>
+                <img src="images/event_icon_payco.png" class="button_nextto_paragraph" />
+                페이코 결제시 최대 <b>2000원</b> 할인쿠폰
+                <img src="images/event_icon_payco_right_arrow.png" class="button_event_arrow"></img>
+              </p>
+
+              <p>
+                <img src="images/payment_icon_yellow_large.png" class="button_nextto_paragraph" />
+                카카오페이 20000원 이상 결제시 <b>4000원</b> 할인쿠폰
+                <img src="images/event_icon_payco_right_arrow.png" class="button_event_arrow"></img>
+              </p>
+            </div>
+            <button class="button_step4" type="button" onClick={function (e) {}}>
               <img src="images/payment_icon_yellow_large.png" />
+            </button>
+            <button class="button_step4" type="button" onClick={function (e) {}}>
+              <img src="images/payment_icon_card.png" />
+            </button>
+            <button class="button_step4" type="button" onClick={function (e) {}}>
+              <img src="images/payment_icon_payco.png" />
+            </button>
+            <button class="button_step4" type="button" onClick={function (e) {}}>
+              <img src="images/payment_icon_naver.png" />
             </button>
           </div>
         </div>
