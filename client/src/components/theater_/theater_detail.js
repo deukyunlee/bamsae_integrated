@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Pick_date from './datepicker';
+import Schedule from './schedule';
 
 class Theater_detail extends Component {
     constructor(props) {
@@ -79,7 +80,7 @@ class Theater_detail extends Component {
 												</div>
 											</div>
 											<div class="schedule">
-												<p>Movie item goes here</p>
+												<p><Schedule schedule={this.props.schedule}></Schedule></p>
 											</div>
 										</div>
 						            </div>

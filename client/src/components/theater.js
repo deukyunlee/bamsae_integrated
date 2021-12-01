@@ -30,9 +30,27 @@ class Theater extends Component {
                         seat: 420
                     }
                 ]
-            }
+            },
+            schedule: [
+                {
+                    start_time: new Date(2021, 12, 1, 6, 0),
+                    movie_name: "이터널스",
+                    loc: 2,
+                },
+                {
+                    start_time: new Date(2021, 12, 1, 8, 30),
+                    movie_name: "듄",
+                    loc: 1,
+                },
+                {
+                    start_time: new Date(2021, 12, 1, 6, 0),
+                    movie_name: "유체이탈자",
+                    loc: 3,
+                }
+            ]
         }
     }
+    
 
     handleChange = (code, id) => {
         var theaters = Object.values(this.state.data);
@@ -75,7 +93,8 @@ class Theater extends Component {
                     data={this.state.data}
                     selected_item={this.state.selected_item}
                     handleChange={this.handleChange}
-                    handleFocus={this.handleFocus}></Theater_Contents>
+                    handleFocus={this.handleFocus}
+                    schedule={this.state.schedule}></Theater_Contents>
             </div>
         );
     }
