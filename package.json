@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": "true",
   "description": "",
+  "proxy": "http://localhost:5000",
   "main": "database.js",
   "scripts": {
     "server": "cd server && npx nodemon app.js",

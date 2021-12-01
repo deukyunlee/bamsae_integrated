@@ -1,5 +1,8 @@
+import { Step } from "@material-ui/core"
 import React, { Component } from "react"
 import Kakaopay from "./payment/kakaopay"
+import Step3 from "./step3"
+import Step1 from "./step1"
 
 class Step4 extends Component {
   render() {
@@ -58,9 +61,12 @@ class Step4 extends Component {
                 <img src="images/event_icon_payco_right_arrow.png" class="button_event_arrow"></img>
               </p>
             </div>
-            <button class="button_step4" type="button" onClick={function (e) {}}>
-              <img src="images/payment_icon_yellow_large.png" />
-            </button>
+
+            <a href="http://localhost:5000/kakaopay?order_id=2&mem_id=abc&item_name=popcorn&quantity=2&price=2000">
+              <button class="button_step4" type="button">
+                <img src="images/payment_icon_yellow_large.png" />
+              </button>
+            </a>
             <button class="button_step4" type="button" onClick={function (e) {}}>
               <img src="images/payment_icon_card.png" />
             </button>

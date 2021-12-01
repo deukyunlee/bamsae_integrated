@@ -11,9 +11,9 @@ router.get("/", function (req, res) {
   db.query(
     `SELECT emp_id, emp_name, emp_dept, sal_basic, sal_bonus, sal_monthly, sal_date, if(is_paid=1, '지급완료','미지급') as is_paid FROM salary NATURAL JOIN employee WHERE emp_name = ?;`,
     selectData,
-    function (err, rows) {
+    function (err, data) {
       if (err) throw err
-      else res.send(rows)
+      else res.send({ status: true, length: data.length, data: data })
     }
   )
 })
@@ -25,9 +25,9 @@ router.get("/date", function (req, res) {
   db.query(
     `SELECT emp_id, emp_name, emp_dept, sal_basic, sal_bonus, sal_monthly, sal_date, if(is_paid=1, '지급완료','미지급') as is_paid FROM salary NATURAL JOIN employee WHERE emp_name = ? AND sal_date BETWEEN ? AND ?;`,
     selectData,
-    function (err, rows) {
+    function (err, data) {
       if (err) throw err
-      else res.send(rows)
+      else res.send({ status: true, length: data.length, data: data })
     }
   )
 })
@@ -39,9 +39,9 @@ router.get("/dept", function (req, res) {
   db.query(
     `SELECT emp_id, emp_name, emp_dept, sal_basic, sal_bonus, sal_monthly, sal_date, if(is_paid=1, '지급완료','미지급') as is_paid FROM salary NATURAL JOIN employee WHERE emp_dept = ?;`,
     selectData,
-    function (err, rows) {
+    function (err, data) {
       if (err) throw err
-      else res.send(rows)
+      else res.send({ status: true, length: data.length, data: data })
     }
   )
 })
@@ -53,9 +53,9 @@ router.get("/dept/date", function (req, res) {
   db.query(
     `SELECT emp_id, emp_name, emp_dept, sal_basic, sal_bonus, sal_monthly, sal_date, if(is_paid=1, '지급완료','미지급') as is_paid FROM salary NATURAL JOIN employee WHERE emp_dept = ? AND sal_date BETWEEN ? AND ?;`,
     selectData,
-    function (err, rows) {
+    function (err, data) {
       if (err) throw err
-      else res.send(rows)
+      else res.send({ status: true, length: data.length, data: data })
     }
   )
 })

@@ -1,10 +1,10 @@
+import { Step } from "@material-ui/core"
 import React, { Component } from "react"
 import Reserve_Moviegrid from "./reserve_moviegrid"
 
 class Step1 extends Component {
   constructor(props) {
     super(props)
-
     this.state = {
       selected_items: [],
     }

@@ -11,8 +11,7 @@ router.get("/", function (req, res) {
   // console.log(queryData.quantity)
   // console.log("success")
   const totalPrice = queryData.quantity * queryData.price
-  const point = 
-  console.log(totalPrice)
+  const point = console.log(totalPrice)
   db.query(
     `UPDATE member SET mem_point = mem_point + ${totalPrice}*0.05 where mem_id = '${queryData.mem_id}';`,
     async function (err, rows, fields) {
@@ -21,7 +20,11 @@ router.get("/", function (req, res) {
       db.query(`SELECT mem_point from member where mem_id = ${queryData.mem_id};`, (err, rows, fields) =>
         res.send(fields)
       ),
-        res.send(`${totalPrice * 0.05}만큼 포인트가 적립되었습니다.`)
+        res.send(
+          `${totalPrice * 0.05}만큼 포인트가 적립되었습니다. <script>alert(${
+            totalPrice * 0.05
+          }+'포인트만큼 적립되었습니다. 결제가 완료되었습니다.');location.href='http://localhost:3000';</script>`
+        )
       // await res.redirect("/movieHistory")
     }
   )
