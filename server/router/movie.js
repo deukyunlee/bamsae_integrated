@@ -3,7 +3,7 @@ const app = express();
 const router = express.Router();
 const db = require('../app.js')
 
-//°³ºÀ¿¹Á¤ÀÛ Á¶È¸
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸
 router.get('/upcomingList', async (req, res) => {
     await db.query(`SELECT movie_id,movie_title,count(mem_id) FROM MOVIE natural join WISH
                      WHERE movie_release > CURDATE() GROUP BY movie_id`, (err, data) => {
@@ -16,7 +16,7 @@ router.get('/upcomingList', async (req, res) => {
     });
 });
 
-//ÇöÀç °³ºÀÀÛ Á¶È¸
+//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸
 router.get('/currentList', async (req, res) => {
     await db.query(`SELECT movie_id,movie_title,count(mem_id) FROM MOVIE natural join WISH
     WHERE movie_release <= CURDATE() GROUP BY movie_id`, (err, data) => {
@@ -29,7 +29,7 @@ router.get('/currentList', async (req, res) => {
     });
 });
 
-//°³ºÀ¿¹Á¤ÀÛ »ó¼¼Á¶È¸
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½È¸
 router.get('/upcoming', async (req, res) => {
     const movie_id = req.query.movie_id;
 
@@ -43,7 +43,7 @@ router.get('/upcoming', async (req, res) => {
     });
 });
 
-//ÇöÀç °³ºÀÀÛ »ó¼¼Á¶È¸
+//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½È¸
 router.get('/current', async (req, res) => {
     const movie_id = req.query.movie_id;
 

@@ -8,9 +8,9 @@ var db = require("../app.js")
 router.get("/", function (req, res) {
   db.query(
     `SELECT emp_id, CASE WHEN CHAR_LENGTH(emp_name) > 2 THEN CONCAT(SUBSTRING(emp_name, 1, 1),LPAD('*', CHAR_LENGTH(emp_name) - 2, '*'),SUBSTRING(emp_name, CHAR_LENGTH(emp_name), CHAR_LENGTH(emp_name))) ELSE CONCAT( SUBSTRING(emp_name, 1, 1),LPAD('*', CHAR_LENGTH(emp_name) -1, '*')) END AS emp_name, REPLACE(emp_phone,right(emp_phone, 4),'****') AS emp_phone, if(emp_gender=1, '남','여') as emp_gender, date_format(emp_birth, '%Y-%m-%d') as emp_birth, emp_dept, emp_rank, emp_type, emp_email, if(is_resignated=0,'재직자','퇴사자') AS emp_resignated, date_format(emp_join, '%Y-%m-%d') as emp_join, emp_password FROM employee;`,
-    function (err, rows) {
+    function (err, data) {
       if (err) throw err
-      else res.send(rows)
+      else res.send({ status: true, length: data.length, data: data })
     }
   )
 })

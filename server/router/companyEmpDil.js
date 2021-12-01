@@ -13,9 +13,9 @@ router.get("/", function (req, res) {
   db.query(
     `SELECT emp_id, emp_name, dil_worktime, dil_leavetime, dil_schedule from diligence NATURAL JOIN employee WHERE emp_id = ? OR emp_name =? OR emp_dept = ?;`,
     selectData,
-    function (err, rows) {
+    function (err, data) {
       if (err) throw err
-      else res.send(rows)
+      else res.send({ status: true, length: data.length, data: data })
     }
   )
 })

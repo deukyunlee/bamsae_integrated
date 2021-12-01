@@ -57,9 +57,9 @@ router.get("/movie/star", function (req, res) {
   db.query(
     `select movie_id, movie_title, AVG(review_star) from review NATURAL JOIN movie where movie_id = ? OR movie_title = ? group by movie_id`,
     selectData,
-    function (err, rows) {
+    function (err, data) {
       if (err) throw err
-      else res.send(rows)
+      else res.send({ status: true, length: data.length, data: data })
     }
   )
 })
@@ -72,9 +72,9 @@ router.get("/movie/review", function (req, res) {
   db.query(
     `select movie_id, movie_title, review_content from review NATURAL JOIN movie where movie_id = ? OR movie_title = ?`,
     selectData,
-    function (err, rows) {
+    function (err, data) {
       if (err) throw err
-      else res.send(rows)
+      else res.send({ status: true, length: data.length, data: data })
     }
   )
 })

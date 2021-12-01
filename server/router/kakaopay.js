@@ -23,7 +23,7 @@ router.get("/", function (req, res) {
     Authorization: "KakaoAK " + adminKey,
     "Content-type": "application/x-www-form-urlencoded;charset=utf-8",
   }
-  // url 예시 : http://localhost:3000/kakaopay?order_id=2&mem_id=abc&item_name=popcorn&quantity=2&price=2000
+  // url 예시 : http://localhost:5000/kakaopay?order_id=2&mem_id=abc&item_name=popcorn&quantity=2&price=2000
   let _form = httpBuildQuery({
     cid: "TC0ONETIME",
     // partner_order_id: queryData.order_id,
@@ -39,8 +39,8 @@ router.get("/", function (req, res) {
     total_amount: quantity * price,
     vat_amount: (quantity * price) / 10,
     tax_free_amount: "0",
-    approval_url: `http://localhost:3000/paySuccess?order_id=${order_id}&mem_id=${mem_id}&item_name=${item_name}&quantity=${quantity}&price=${price}`, // localhost에 https 적용할 때 까지 임시로 사용
-    fail_url: `http://localhost:3000/payFail?order_id=${order_id}&mem_id=${mem_id}&item_name=${item_name}&quantity=${quantity}&price=${price}`,
+    approval_url: `http://localhost:5000/paySuccess?order_id=${order_id}&mem_id=${mem_id}&item_name=${item_name}&quantity=${quantity}&price=${price}`, // localhost에 https 적용할 때 까지 임시로 사용
+    fail_url: `http://localhost:5000/payFail?order_id=${order_id}&mem_id=${mem_id}&item_name=${item_name}&quantity=${quantity}&price=${price}`,
     cancel_url: "https://developers.kakao.com",
   })
 

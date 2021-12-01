@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Mp_Content from './mypage_/mp_content';
+import axios from 'axios'
 
 class MyPage extends Component {
 	constructor(props) {
@@ -8,10 +9,14 @@ class MyPage extends Component {
 			section: "info",
 			mode: "view"
 		}
-	}
+		
+}
+
 
     render() {
-        return (<div>
+		return (
+			
+			<div>
             <div class="hero user-hero">
 	<div class="container">
 		<div class="row">
@@ -39,7 +44,6 @@ class MyPage extends Component {
 						<a href="#" class="redbtn">프로필 변경</a>
 					</div>
 					<div class="user-fav">
-						<p>기본 정보</p>
 						<ul>
 							<li><a href="#" onClick={function(e) {
 								e.preventDefault();
@@ -89,15 +93,16 @@ class MyPage extends Component {
 			</div>
 			<div class="col-md-9 col-sm-12 col-xs-12">
 				<Mp_Content
-					username={this.props.username}
-					section={this.state.section}
-					mode={this.state.mode}
-					onChangeSection={function(code){
-                		this.setState({
-                    		mode: code,
-                		});
-            		}.bind(this)}
-					inquiry_data={this.props.inquiry_data}
+										username={this.props.username}
+										section={this.state.section}
+										mode={this.state.mode}
+										onChangeSection={function (code) {
+											this.setState({
+												mode: code,
+											});
+										}.bind(this)}
+										inquiry_data={this.props.inquiry_data}
+										onChangePage={this.props.onChangePage}
 				></Mp_Content>
 			</div>
 		</div>

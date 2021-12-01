@@ -23,7 +23,7 @@ class Content extends Component {
     } else if (this.props.page === "store") {
       return <Store></Store>
     } else if (this.props.page === "mypage") {
-      return <MyPage username={this.props.username} inquiry_data={this.props.inquiry_data}></MyPage>
+        return <MyPage username={this.props.username} inquiry_data={this.props.inquiry_data} onChangePage={this.props.onChangePage}></ MyPage>
     } else if (this.props.page === "service") {
       return (
         <Service_Center

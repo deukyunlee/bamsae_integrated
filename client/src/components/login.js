@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { fetchLogin } from './auth/auth_user';
+import axios from 'axios'
 
 class Login extends Component {
     constructor(props) {
@@ -31,22 +31,28 @@ class Login extends Component {
     }
 
     onSubmitAccount = async () => {
-        try {
-            const user = await fetchLogin(this.state.account);
-      
-            //성공하면 해당 user 아이디 패스워드값 셋팅
-            //성공하면 해당 url로 이동(main페이지로)
-            alert("로그인 성공");
-            this.props.loginSucess(user.name);
-            this.props.onChangePage("main");
-            window.location.reload(false);
-            window.scrollTo(0, 0);
-          } catch (error) {
-      
-              //실패하면 throw new Error("") 값 출력
-            window.alert(error);
-          }
-    };
+        axios({
+            method: "POST",
+            url: "http://localhost:5000/memLogin/auth",
+            data: {
+                mem_id: this.state.account.id,
+                mem_pw: this.state.account.password
+            }
+        }).then((res) => {
+            console.log(res)
+            if (res.data.loggin == 1) {
+                window.alert("로그인에 성공하였습니다.")
+                this.props.loginSucess(res.data.mem_id);
+                this.props.onChangePage("main");
+                window.location.reload(false);
+                window.scrollTo(0, 0);
+            } else {
+                window.alert("로그인에 실패하였습니다.")
+            }
+        }).catch(error => {
+            window.alert(error)
+        })
+    }
 
     render() {
         const style_input = {
