@@ -13,22 +13,27 @@ router.get('/', function (req, res) {
 router.post('/auth', function (req, res) {
     var mem_id = req.body.mem_id;
     var mem_pw = req.body.mem_pw;
-
+    
+    console.log(mem_id, mem_pw)
     db.query('SELECT * FROM member WHERE mem_id = ? AND mem_pw = ?', [mem_id, mem_pw], function (err, rows, fields) {
         if (err) {
             console.log(err);
         }
         // 로그인 정보가 일치하지 않을 때
         if (rows.length <= 0) {
-            req.flash('error', '아이디와 비밀번호를 정확히 입력해주세요.')
-            res.redirect('/memLogin')
+            const result = {
+                "mem_id": mem_id,
+                "loggin": 0
+            }
+            res.send(result)
         }
         // 로그인 정보가 일치할 때
         else {
-            req.session.login = true;
-            req.session.mem_id = mem_id;
-            console.log(req.session);
-            res.redirect('/memMain');
+            const result = {
+                "mem_id": mem_id,
+                "loggin": 1
+            }
+            res.send(result)
         }
     })
 })
