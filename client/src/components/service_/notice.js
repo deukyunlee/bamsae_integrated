@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Component } from 'react';
+import React, { Component } from 'react';
 import Faq_table from "./table/faq_table"
 import Table from "@material-ui/core/Table"
 import TableHead from "@material-ui/core/TableHead"

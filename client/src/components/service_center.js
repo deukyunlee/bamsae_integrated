@@ -71,6 +71,20 @@ class Service_center extends Component{
                                         });
                                     }.bind(this)}>1:1문의</a>
                                 </li>
+                                <li>
+                                    <a href="#overview" onClick={function (e) {
+                                        e.preventDefault();
+                                        if (!this.props.is_logined) {
+                                            alert("로그인이 필요한 서비스입니다.")
+                                            this.props.onChangePage("login");
+                                            return;
+                                        }
+                                        this.setState({
+                                            tab: "chatbot",
+                                            in_detail: false,
+                                        });
+                                    }.bind(this)}>챗봇 서비스</a>
+                                </li>
                             </ul>
                             <Service_content tab={this.state.tab} onChangeDetail={function(id){
                                 this.setState({
