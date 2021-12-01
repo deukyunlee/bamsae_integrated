@@ -1,6 +1,25 @@
 import React, {Component} from 'react';
 
 class Signup extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            account: {
+                id: "",
+                password: "",
+            }
+        };
+    }
+
+    onHandlePWChange(value) {
+        this.setState({
+            account: {
+                id: this.state.account.id,
+                password: value,
+            }
+        });
+    }
+
     render() {
 
         const style_input = {
