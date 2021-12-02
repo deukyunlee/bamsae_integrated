@@ -21,9 +21,9 @@ class Ticket extends Component {
                                                             e.preventDefault();
                                                             this
                                                                 .props
-                                                                .onChangeDetail();
+                                                                .onChangeTab("single");
                                                         }.bind(this)}>
-                                                        상세정보
+                                                        구매하기
                                                         <i class="ion-android-arrow-dropright"></i>
                                                     </a>
                                                 </div>
@@ -44,9 +44,9 @@ class Ticket extends Component {
                                                             e.preventDefault();
                                                             this
                                                                 .props
-                                                                .onChangeDetail();
+                                                                .onChangeTab("single");
                                                         }.bind(this)}>
-                                                        상세정보
+                                                        구매하기
                                                         <i class="ion-android-arrow-dropright"></i>
                                                     </a>
                                                 </div>

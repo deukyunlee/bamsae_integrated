@@ -27,10 +27,10 @@ class Snack extends Component {
                             href="index.html"
                             onClick={function (e) {
                               e.preventDefault()
-                              this.props.onChangeDetail()
+                              this.props.onChangeTab("single");
                             }.bind(this)}
                           >
-                            상세정보
+                            구매하기
                             <i class="ion-android-arrow-dropright"></i>
                           </a>
                         </div>
@@ -49,10 +49,10 @@ class Snack extends Component {
                             href="index.html"
                             onClick={function (e) {
                               e.preventDefault()
-                              this.props.onChangeDetail()
+                              this.props.onChangeTab("single");
                             }.bind(this)}
                           >
-                            상세정보
+                            구매하기
                             <i class="ion-android-arrow-dropright"></i>
                           </a>
                         </div>
