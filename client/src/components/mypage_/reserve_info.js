@@ -17,7 +17,7 @@ class Reserve_info extends Component {
         <p>최근 30일</p>
         <div class="flex-wrap-movielist grid-fav">
           <div class="movie-item-style-2 movie-item-style-1 style-3">
-            <img src="images/uploads/mv1.jpg" alt=""></img>
+            <img src="images/uploads/mv-item1.jpg" alt=""></img>
             <div class="hvr-inner">
               <a href="moviesingle.html">
                 {" "}
@@ -26,17 +26,17 @@ class Reserve_info extends Component {
             </div>
             <div class="mv-item-infor">
               <h6>
-                <a href="moviesingle.html">oblivion</a>
+                <a href="moviesingle.html">유체이탈자</a>
               </h6>
             </div>
             <div class="reserve_info">
-              <h7>2021-11-23</h7>
-              <p>성인 3명</p>
-              <p>C4 C5 C6</p>
+              <h7>2021-12-21</h7>
+              <p>성인 2명</p>
+              <p>안산점 4관 C4 C5</p>
             </div>
           </div>
           <div class="movie-item-style-2 movie-item-style-1 style-3">
-            <img src="images/uploads/mv2.jpg" alt=""></img>
+            <img src="images/uploads/mv-item2.jpg" alt=""></img>
             <div class="hvr-inner">
               <a href="moviesingle.html">
                 {" "}
@@ -45,13 +45,13 @@ class Reserve_info extends Component {
             </div>
             <div class="mv-item-infor">
               <h6>
-                <a href="moviesingle.html">into the wild</a>
+                <a href="moviesingle.html">이터널스</a>
               </h6>
             </div>
             <div class="reserve_info">
-              <h7>2021-11-22</h7>
-              <p>성인 3명</p>
-              <p>C4 C5 C6</p>
+              <h7>2021-12-5</h7>
+              <p>성인 1명</p>
+              <p>초지점 11관 J2</p>
             </div>
           </div>
           <div class="movie-item-style-2 movie-item-style-1 style-3">
@@ -64,13 +64,13 @@ class Reserve_info extends Component {
             </div>
             <div class="mv-item-infor">
               <h6>
-                <a href="moviesingle.html">Die hard</a>
+                <a href="moviesingle.html">엔칸토:마법의세계</a>
               </h6>
             </div>
             <div class="reserve_info">
               <h7>2021-11-21</h7>
               <p>성인 3명</p>
-              <p>C4 C5 C6</p>
+              <p>강남점 2관 F4 F5 F6</p>
             </div>
           </div>
         </div>
