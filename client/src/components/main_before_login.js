@@ -26,7 +26,6 @@ class Main_A extends Component {
           </div>
         </div>
         <div class="ads">
-          <img src="images/uploads/ads2.png" alt="" width="309" height="45" />
         </div>
         <div class="latestnew">
           <div class="container">

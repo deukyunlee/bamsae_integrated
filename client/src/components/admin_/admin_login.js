@@ -52,7 +52,7 @@ class Admin_login extends Component {
       //     }}
       //   ></Navigate>
       // )
-      this.props.loginSucess()
+      this.props.loginSucess();
     } catch (error) {
       //실패하면 throw new Error("") 값 출력
       window.alert(error)

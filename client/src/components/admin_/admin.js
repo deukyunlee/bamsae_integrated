@@ -70,8 +70,8 @@ class Admin extends Component {
                                     href="#overview"
                                     onClick={function (e) {
                                         e.preventDefault();
-                                        this.setState({tab: "pay", in_detail: false});
-                                    }.bind(this)}>급여 관리</a>
+                                        this.setState({tab: "employee", in_detail: false});
+                                    }.bind(this)}>직원 관리</a>
                             </li>
                             <li>
                                 <a

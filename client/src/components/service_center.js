@@ -46,17 +46,8 @@ class Service_center extends Component{
                                             tab: "FAQ",
                                             in_detail: false,
                                         });
-                                    }.bind(this)}>FAQ</a>
-                                </li>
-                                <li>
-                                    <a href="#overview" onClick={function(e){
-                                        e.preventDefault();
-                                        this.setState({
-                                            tab: "Notice",
-                                            in_detail: false,
-                                        });
                                     }.bind(this)}>공지사항</a>
-                                </li>
+                                </li>                                
                                 <li>
                                     <a href="#overview" onClick={function(e){
                                         e.preventDefault();
