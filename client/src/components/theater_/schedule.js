@@ -34,41 +34,45 @@ class Schedule extends Component {
     }
 
     render() {
-        var allItems = Object.values(this.state);
-        var itemObject = {
-            1: [], // 1관
-            2: [], // 2관
-            3: [], // 3관
-            4: [], // imax
-        }
-        for (const timeline of allItems) {
-            for (const item of timeline) {
-                for (var i=1; i<5; i++) {
-                    if (item.loc === i) {
-                        itemObject[String(i)].push(item);
-                        continue;
+        var allSchedule = Object.values(this.state);
+        
+        var row = [];
+        for (const timeline of allSchedule) {
+            var obj = {
+                1: [], // 1관
+                2: [], // 2관
+                3: [], // 3관
+                4: [] // imax 관
+            }
+            for (const item of timeline) { // loc 2
+                for (var j=1; j<=4; j++) {
+                    if (item.loc == j) {
+                        obj[j.toString()].push(item);
+                        break;
                     }
-                    itemObject[String(i)].push(null);
                 }
-                
             }
+            row.push(obj);
         }
-        var list = [];
-        for (var j=0; j<allItems.length; j++) {
-            var items = [];
-            for (var k=1; k<5; k++) {
-                if (itemObject[String(k)][j] === null) {
-                    items.push(<td></td>);
-                    continue;
+        // row = [ {1:[], 2:[], 3:[], 4:[]} , {1:[], 2:[], 3:[], 4:[]} ]
+        var arr = [];
+        for (var i=0; i<row.length; i++) {
+            var timerow = row[i] // object
+            var items = Object.values(timerow);
+            var temp = [];
+            for (const timeline of items) {
+                if (timeline.length == 0) {
+                    temp.push(<td></td>);
+                } else {
+                    for (const item of timeline) {
+                        temp.push(<td>{item.movie_name}</td>)
+                    }
                 }
-                // <td>{itemObject[String(k)][j].movie_name}<br/>{itemObject[String(k)][j].start_time}</td>
-                items.push(<td>여기 영화</td>);
             }
-            list.push(
-                <tr>
-                <th>am{j+6}:00</th>
-                    {items}
-                </tr>)
+            arr.push(<tr>
+                <th>am{i}:00</th>
+                {temp}
+            </tr>);
         }
         return (
             <table>
@@ -80,11 +84,7 @@ class Schedule extends Component {
                     <th>IMAX관</th>
                 </thead>
                 <tbody>
-                    {list}
-                    <th>월급</th>
-                    <td>100원</td>
-                    <td>200원</td>
-                    <td>400원</td>
+                {arr}
                 </tbody>
             </table>
         );
