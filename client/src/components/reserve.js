@@ -27,6 +27,7 @@ class Reserve extends Component {
         },
       ],
       selected_items: [],
+      selected_seats: [],
       ticket: [],
     }
   }
@@ -89,12 +90,18 @@ class Reserve extends Component {
                 step3: true,
               })
             }.bind(this)}
+            getSelected={function(arr){
+              this.setState({
+                selected_seats: arr,
+              })
+            }.bind(this)}
           ></Step2>
         ) : (
           <br />
         )}
         {this.state.step3 ? (
           <Step3
+            limit={this.state.selected_seats.length}
             getCount={function (arr) {
               this.setState({
                 ticket: arr,
@@ -109,7 +116,7 @@ class Reserve extends Component {
         ) : (
           <br />
         )}
-        {this.state.step4 ? <Step4 ticket={this.state.ticket} /> : <br />}
+        {this.state.step4 ? <Step4 ticket={this.state.ticket} selected_seats={this.state.selected_seats}/> : <br />}
       </div>
     )
   }
