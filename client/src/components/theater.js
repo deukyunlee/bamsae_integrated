@@ -8,7 +8,7 @@ class Theater extends Component {
         this.state = {
             page: "list",
             focus: "SE",
-            theater_id: null,
+            selected_item: null,
             data: [],
             schedule: [
                 {
@@ -49,9 +49,17 @@ class Theater extends Component {
       }
 
     handleChange = (code, id_) => {
+        var items = this.state.data;
+        var found = this.state.selected_item;
+        for (var i=0; i<items.length; i++) {
+            if (items[i].theater_id === id_) {
+                found = items[i];
+                break;
+            }
+        }
         this.setState({
             page: code,
-            theater_id : id_,
+            selected_item : found,
         });
     };
 
@@ -68,7 +76,7 @@ class Theater extends Component {
                     page={this.state.page}
                     focus={this.state.focus}
                     data={this.state.data}
-                    theater_id={this.state.theater_id}
+                    selected_item={this.state.selected_item}
                     handleChange={this.handleChange}
                     handleFocus={this.handleFocus}
                     schedule={this.state.schedule}></Theater_Contents>

@@ -27,7 +27,7 @@ class List extends Component {
 					<p>전국 상영관 수 <span>{this.props.data.length}</span> </p>
 					<label>분류</label>
 					<select
-                        defaultValue="seoul"
+                        defaultValue="SE"
                         onChange={function(e){
 							this.props.handleFocus(e.target.value)
 						}.bind(this)}

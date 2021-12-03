@@ -23,9 +23,9 @@ class TheaterItem extends Component {
                         e.preventDefault();
                         this.props.handleChange("detail", e.target.id);
                         window.scrollTo(0, 0);
-                    }.bind(this)}>{view[i].theater_id}</a></h6>
-                    <p class="describe">극장 desc</p>
-                    <p class="seats">N 석</p>
+                    }.bind(this)}>{view[i].theater_name}</a></h6>
+                    <p class="describe">{view[i].theater_info}</p>
+                    <p class="seats">{view[i].theater_seatnum} 석</p>
                 </div>
 			</div>
             )

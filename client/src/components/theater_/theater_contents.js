@@ -14,7 +14,7 @@ class Theater_Contents extends Component {
         ></List>
       )
     } else if (this.props.page === "detail") {
-      return <Theater_detail theater_id={this.props.theater_id} schedule={this.props.schedule}/>
+      return <Theater_detail selected_item={this.props.selected_item} schedule={this.props.schedule}/>
     }
   }
 }
