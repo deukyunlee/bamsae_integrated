@@ -70,7 +70,7 @@ class Movie_Detail extends Component {
                     </div>
                     <div class="btn-transform transform-vertical">
                       <div>
-                        <a href="#" class="item item-1 yellowbtn">
+                        <a href="hu" class="item item-1 yellowbtn">
                           {" "}
                           <i class="ion-card"></i>예매하기
                         </a>
