@@ -1,0 +1,11 @@
+UPDATE `movie` SET `movie_title` = '듄', `movie_summary` = '.', `movie_pre` = '.', `movie_type` = '.' WHERE (`movie_id` = '2');
+UPDATE `movie` SET `movie_summary` = '.', `movie_pre` = '.', `movie_type` = '.' WHERE (`movie_id` = '1');
+INSERT INTO `movie` (`movie_id`, `movie_title`, `movie_summary`, `movie_pre`, `movie_type`) VALUES ('3', '장르만 로맨스', '.', '.', '.');
+INSERT INTO `movie` (`movie_id`, `movie_title`, `movie_summary`, `movie_pre`, `movie_type`) VALUES ('4', '디어 에반 헨슨', '.', '.', '..');
+INSERT INTO `movie` (`movie_id`, `movie_title`, `movie_summary`, `movie_pre`, `movie_type`) VALUES ('5', '프렌치 디스패치', '.', '.', '.');
+INSERT INTO `movie` (`movie_id`, `movie_title`, `movie_summary`, `movie_pre`, `movie_type`) VALUES ('6', '유체이탈자', '.', '.', '.');
+INSERT INTO `movie` (`movie_id`, `movie_title`, `movie_summary`, `movie_pre`, `movie_type`) VALUES ('7', '연애 빠진 로맨스', '.', '.', '.');
+INSERT INTO `movie` (`movie_id`, `movie_title`, `movie_summary`, `movie_pre`, `movie_type`) VALUES ('8', '엔칸토:마법의세계', '.', '.', '.');
+INSERT INTO `movie` (`movie_id`, `movie_title`, `movie_summary`, `movie_pre`, `movie_type`) VALUES ('9', '고스트버스터즈 라이즈', '.', '.', '.');
+INSERT INTO `movie` (`movie_id`, `movie_title`, `movie_summary`, `movie_pre`, `movie_type`) VALUES ('10', '라스트 나잇 인 소호', '.', '.', '.');
+INSERT INTO `movie` (`movie_id`, `movie_title`, `movie_summary`, `movie_pre`, `movie_type`) VALUES ('11', '태일이', '.', '.', '.');
