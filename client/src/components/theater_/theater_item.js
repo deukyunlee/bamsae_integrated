@@ -17,7 +17,7 @@ class TheaterItem extends Component {
         while(i < view.length) {
             lists.push(
             <div class="movie-item-style-2">
-                <img src="images/uploads/mv1.jpg" alt=""></img>
+                <img src="images/ex.png" alt=""></img>
                 <div class="mv-item-infor">
                     <h6><a id={view[i].theater_id} href="/" onClick={function(e){
                         e.preventDefault();
