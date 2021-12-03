@@ -28,7 +28,7 @@ class NoticeInfo extends Component {
                 <td>강남</td>
                 <td>극장</td>
                 <td>극장 이용가능 시간 안내</td>
-                <td>2021.11.8</td>
+                <td>2021.11.08</td>
               </tr>
               <tr>
                 <td>2</td>
@@ -39,7 +39,7 @@ class NoticeInfo extends Component {
               </tr>
               <tr>
                 <td>3</td>
-                <td></td>
+                <td>-</td>
                 <td>전체</td>
                 <td>방역지침 관련 안내드립니다.</td>
                 <td>2021.11.21</td>
@@ -49,7 +49,7 @@ class NoticeInfo extends Component {
                 <td>광교</td>
                 <td>극장</td>
                 <td>광교 개점 이벤트</td>
-                <td>2021.12.2</td>
+                <td>2021.12.02</td>
               </tr>
             </table>
           </div>

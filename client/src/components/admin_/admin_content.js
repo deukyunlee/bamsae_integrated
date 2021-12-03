@@ -36,4 +36,4 @@ class Admin_content extends Component {
   }
 }
 
-export default Admin_content
+export default Admin_content;
