@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import Admin_content from "./admin_content"
+
 class Sales extends Component {
   constructor(props) {
     super(props)
