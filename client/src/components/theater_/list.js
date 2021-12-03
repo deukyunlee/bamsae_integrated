@@ -2,15 +2,6 @@ import React, { Component } from 'react';
 import TheaterItem from './theater_item';
 
 class List extends Component {
-    countAll = () => {
-		var keys = Object.keys(this.props.data);
-		var sum = 0;
-		for (const k of keys) {
-			sum += this.props.data[k].length;
-		}
-		return sum;
-	};
-
     render() {
         return (<div>
 			<div class="hero common-hero">
@@ -33,7 +24,7 @@ class List extends Component {
 		<div class="row ipad-width2">
 			<div class="col-md-8 col-sm-12 col-xs-12">
 				<div class="topbar-filter">
-					<p>전국 상영관 수 <span>{this.countAll()}</span> </p>
+					<p>전국 상영관 수 <span>{this.props.data.length}</span> </p>
 					<label>분류</label>
 					<select
                         defaultValue="seoul"
@@ -41,13 +32,14 @@ class List extends Component {
 							this.props.handleFocus(e.target.value)
 						}.bind(this)}
                     >
-                            <option value="seoul">서울</option>
-                            <option value="gyeonggi">경기</option>
-                            <option value="incheon">인천</option>
-                            <option value="gangwon">강원</option>
-                            <option value="daegu">대구/충청/세종</option>
-                            <option value="busan">부산/대구/경상</option>
-                            <option value="gwanju">광주/전라</option>
+                            <option value="SE">서울</option>
+                            <option value="GG">경기</option>
+                            <option value="GW">강원</option>
+                            <option value="BU">부산</option>
+                            <option value="GS">경상</option>
+                            <option value="JR">전라</option>
+							<option value="CC">충청</option>
+							<option value="JJ">제주</option>
 					</select>
 					<a href="movielist_light.html" class="list"><i class="ion-ios-list-outline active"></i></a>
 					<a  href="moviegrid_light.html" class="grid"><i class="ion-grid"></i></a>

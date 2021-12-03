@@ -16,7 +16,7 @@ class Movie extends Component {
     this.loadItem();
   }
 
-  loadItem = async () => {
+  loadItem = () => {
     axios
       .get("http://localhost:5000/movie/currentList")
       .then((data_) => {

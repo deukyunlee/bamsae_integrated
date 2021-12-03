@@ -1,36 +1,15 @@
 import React, {Component} from 'react';
 import Theater_Contents from './theater_/theater_contents';
+import axios from 'axios';
 
 class Theater extends Component {
     constructor(props) {
         super(props);
         this.state = {
             page: "list",
-            focus: "seoul",
-            selected_item: null,
-            data: {
-                seoul: [
-                    {
-                        id:0,
-                        name: "강남점",
-                        desc: "서울의 중심에 서다",
-                        seat: 580
-                    }, {
-                        id:1,
-                        name: "이태원점",
-                        desc: "젊음의 도시",
-                        seat: 610
-                    }
-                ],
-                gyeonggi: [
-                    {
-                        id:2,
-                        name: "안산점",
-                        desc: "하냥이의 고향",
-                        seat: 420
-                    }
-                ]
-            },
+            focus: "SE",
+            theater_id: null,
+            data: [],
             schedule: [
                 {
                     start_time: new Date(2021, 12, 1, 6, 0),
@@ -51,18 +30,28 @@ class Theater extends Component {
         }
     }
     
+    componentDidMount() {
+        this.getItems();
+    }
 
-    handleChange = (code, id) => {
-        var theaters = Object.values(this.state.data);
-        var found;
-        for (const item of theaters) {
-            found = item.find(x => x.id === Number(id));
-            if (found !== undefined)
-                break;
-        }
+    getItems = async () => {
+        axios
+          .get("http://localhost:5000/theater")
+          .then((data_) => {
+            this.setState({
+              data : data_.data.data,
+            });
+          }
+          )
+          .catch(e => {
+            console.error(e);
+          });
+      }
+
+    handleChange = (code, id_) => {
         this.setState({
             page: code,
-            selected_item : found,
+            theater_id : id_,
         });
     };
 
@@ -72,18 +61,6 @@ class Theater extends Component {
         });
     }
 
-    countAll = () => {
-        var keys = Object.keys(this.state.data);
-        var sum = 0;
-        for (const k of keys) {
-            sum += this
-                .state
-                .data[k]
-                .length;
-        }
-        return sum;
-    };
-
     render() {
         return (
             <div class="buster-light">
@@ -91,7 +68,7 @@ class Theater extends Component {
                     page={this.state.page}
                     focus={this.state.focus}
                     data={this.state.data}
-                    selected_item={this.state.selected_item}
+                    theater_id={this.state.theater_id}
                     handleChange={this.handleChange}
                     handleFocus={this.handleFocus}
                     schedule={this.state.schedule}></Theater_Contents>
