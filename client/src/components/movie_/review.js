@@ -9,13 +9,13 @@ class Review extends Component {
             <div class="row">
               <div class="col-md-8 col-sm-12 col-xs-12">
                 <div class="title-hd-sm">
-                  <h4>User reviews</h4>
+                  <h4>관람평</h4>
                   <a href="#" class="time">
-                    See All 56 Reviews <i class="ion-ios-arrow-right"></i>
+                    56개의 리뷰가 더 있어요! <i class="ion-ios-arrow-right"></i>
                   </a>
                 </div>
                 <div class="mv-user-review-item">
-                  <h3>Best Marvel movie in my opinion</h3>
+                  <h3>마블덕후라면 꼭 봐야 하는 영화!</h3>
                   <div class="no-star">
                     <i class="ion-android-star"></i>
                     <i class="ion-android-star"></i>
@@ -29,17 +29,34 @@ class Review extends Component {
                     <i class="ion-android-star last"></i>
                   </div>
                   <p class="time">
-                    17 December 2016 by <a href="#"> hawaiipierson</a>
+                    2021년 11월 17일 <a href="#"> 밤새냥 </a>
                   </p>
                   <p>
-                    This is by far one of my favorite movies from the MCU. The introduction of new Characters both good
-                    and bad also makes the movie more exciting. giving the characters more of a back story can also help
-                    audiences relate more to different characters better, and it connects a bond between the audience
-                    and actors or characters. Having seen the movie three times does not bother me here as it is as
-                    thrilling and exciting every time I am watching it. In other words, the movie is by far better than
-                    previous movies (and I do love everything Marvel), the plotting is splendid (they really do out do
-                    themselves in each film, there are no problems watching it more than once.
+                    믿고 보는 마블~ 넘넘 재밌어용~
                   </p>
+                </div>
+                <br />
+                <div class="mv-user-review-item">
+                  <h3>마동석 최고</h3>
+                  <div class="no-star">
+                    <i class="ion-android-star"></i>
+                    <i class="ion-android-star"></i>
+                    <i class="ion-android-star"></i>
+                    <i class="ion-android-star"></i>
+                    <i class="ion-android-star"></i>
+                    <i class="ion-android-star"></i>
+                    <i class="ion-android-star"></i>
+                    <i class="ion-android-star"></i>
+                    <i class="ion-android-star"></i>
+                    <i class="ion-android-star last"></i>
+                  </div>
+                  <p class="time">
+                    2021년 11월 19일 <a href="#"> 밤새봇 </a>
+                  </p>
+                  <p>
+                     마블의 새로운 시작을 알리다! 다양한 정체성을 지닌 캐릭터들을 보는 것만으로도 눈과 마음이 즐겁고, 앞으로 이들이 펼쳐나갈 이야기가 궁금해진다. 
+                  </p>
+                  
                 </div>
               </div>
               <div class="col-md-4 col-xs-12 col-sm-12">

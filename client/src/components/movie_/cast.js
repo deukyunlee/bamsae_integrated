@@ -17,59 +17,69 @@ class Cast extends Component {
                 <div class="mvcast-item">
                   <div class="cast-it">
                     <div class="cast-left">
-                      <img src="images/uploads/cast1.jpg" alt=""></img>
-                      <a href="#">Robert Downey Jr.</a>
+                      <a href="#">클로이 자오</a>
                     </div>
-                    <p>... Robert Downey Jr.</p>
+                    <p>감독</p>
                   </div>
                   <div class="cast-it">
                     <div class="cast-left">
-                      <img src="images/uploads/cast2.jpg" alt=""></img>
-                      <a href="#">Chris Hemsworth</a>
+                      <a href="#">안젤리나 졸리</a>
                     </div>
-                    <p>... Thor</p>
+                    <p>테나 역</p>
                   </div>
                   <div class="cast-it">
                     <div class="cast-left">
-                      <img src="images/uploads/cast3.jpg" alt=""></img>
-                      <a href="#">Mark Ruffalo</a>
+                      <a href="#">마동석</a>
                     </div>
-                    <p>... Bruce Banner/ Hulk</p>
+                    <p>길가메시 역</p>
                   </div>
                   <div class="cast-it">
                     <div class="cast-left">
-                      <img src="images/uploads/cast4.jpg" alt=""></img>
-                      <a href="#">Chris Evans</a>
+                      <a href="#">리차드 매든</a>
                     </div>
-                    <p>... Steve Rogers/ Captain America</p>
+                    <p>이카리스 역</p>
                   </div>
                   <div class="cast-it">
                     <div class="cast-left">
-                      <img src="images/uploads/cast5.jpg" alt=""></img>
-                      <a href="#">Scarlett Johansson</a>
+                      <a href="#">쿠마일 난지아니</a>
                     </div>
-                    <p>... Natasha Romanoff/ Black Widow</p>
+                    <p>킨고 역</p>
                   </div>
                   <div class="cast-it">
                     <div class="cast-left">
-                      <img src="images/uploads/cast6.jpg" alt=""></img>
-                      <a href="#">Jeremy Renner</a>
+                      <a href="#">셀마 헤이엑</a>
                     </div>
-                    <p>... Clint Barton/ Hawkeye</p>
+                    <p>에이잭</p>
                   </div>
                   <div class="cast-it">
                     <div class="cast-left">
-                      <img src="images/uploads/cast7.jpg" alt=""></img>
-                      <a href="#">James Spader</a>
+                      <a href="#">젬마 찬</a>
                     </div>
-                    <p>... Ultron</p>
+                    <p>세르시 역</p>
                   </div>
                   <div class="cast-it">
                     <div class="cast-left">
-                      <img src="images/uploads/cast9.jpg" alt=""></img>
-                      <a href="#">Don Cheadle</a>
+                      <a href="#">브라이언 타이리 헨리</a>
                     </div>
-                    <p>... James Rhodes/ War Machine</p>
+                    <p>파스토스 역</p>
+                  </div>
+                  <div class="cast-it">
+                    <div class="cast-left">
+                      <a href="#">베리 케오간</a>
+                    </div>
+                    <p>드루이그 역</p>
+                  </div>
+                  <div class="cast-it">
+                    <div class="cast-left">
+                      <a href="#">리아 맥휴</a>
+                    </div>
+                    <p>스프라이트 역</p>
+                  </div>
+                  <div class="cast-it">
+                    <div class="cast-left">
+                      <a href="#">키트 해링턴</a>
+                    </div>
+                    <p>데인 휘트먼 역</p>
                   </div>
                 </div>
               </div>

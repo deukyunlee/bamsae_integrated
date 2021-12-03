@@ -11,25 +11,20 @@ class Pre extends Component {
                 <div class="title-hd-sm">
                   <h4>예고편/스틸컷</h4>
                   <a href="#" class="time">
-                    All 5 Videos & 245 Photos <i class="ion-ios-arrow-right"></i>
+                    20개의 스틸컷이 있어요! <i class="ion-ios-arrow-right"></i>
                   </a>
                 </div>
                 <div class="mvsingle-item ov-item">
                   <a class="img-lightbox" data-fancybox-group="gallery" href="images/uploads/image11.jpg">
-                    <img src="images/uploads/image1.jpg" alt=""></img>
+                    <img src="/images/stillcut1.jpeg" alt=""></img>
                   </a>
                   <a class="img-lightbox" data-fancybox-group="gallery" href="images/uploads/image21.jpg">
-                    <img src="images/uploads/image2.jpg" alt=""></img>
+                    <img src="/images/stillcut2.jpeg" alt=""></img>
                   </a>
                   <a class="img-lightbox" data-fancybox-group="gallery" href="images/uploads/image31.jpg">
-                    <img src="images/uploads/image3.jpg" alt=""></img>
+                    <img src="/images/stillcut3.jpeg" alt=""></img>
                   </a>
-                  <div class="vd-it">
-                    <img class="vd-img" src="images/uploads/image4.jpg" alt=""></img>
-                    <a class="fancybox-media hvr-grow" href="https://www.youtube.com/embed/o-0hcF97wy0">
-                      <img src="images/uploads/play-vd.png" alt=""></img>
-                    </a>
-                  </div>
+                  
                 </div>
               </div>
               <div class="col-md-4 col-xs-12 col-sm-12">
