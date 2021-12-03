@@ -2,7 +2,8 @@ import React, { Component } from "react"
 
 class NoticeInfo extends Component {
   render() {
-    return (
+      return (
+          
       <div class="col-md-8">
         <div class="title-hd">
           <h2>공지사항</h2>
@@ -17,12 +18,12 @@ class NoticeInfo extends Component {
             </li>
           </ul>
           <div class="event-table">
-            <table class="t">
+                    <table class="t">
               <th>번호</th>
               <th>극장</th>
               <th>구분</th>
-              <th>제목</th>
-              <th>등록일</th>
+              <th width='500px'>제목</th>
+              <th width='100px'>등록일</th>
               <tr>
                 <td>1</td>
                 <td>강남</td>
