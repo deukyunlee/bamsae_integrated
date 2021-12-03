@@ -56,6 +56,46 @@ class Single extends Component {
                                 <div class="tab-content">
                                     <div id="" class="tab active">
                                         <div class="row">
+                                            
+                                            <div
+                                                style={{
+                                                    margin: '20px',
+                                                    width: '1000px'
+                                                }}
+                                                class="col-md-8 col-sm-12 col-xs-12"
+                                                id="final-purchase">
+                                                
+                                                    <img src="images/003.png" height='200px' width='200px'></img>
+                                                <form
+                                                    
+                                                    style={{
+                                                        margin: '50px'
+                                                    }}
+                                                    class="form-style-1">
+                                                    <h4>상품 정보</h4>
+                                                    <div class="row">
+                                                        <div class="col-md-6 form-it">
+                                                            <label>상품명</label>
+                                                            <p>싱글콤보</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6 form-it">
+                                                            <label>상품 상세</label>
+                                                            <p>팝콘(L) 1 + 탄산음료(R) 2</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6 form-it">
+                                                            <label>가격</label>
+                                                            <p>9000원</p>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
                                             <h2
                                                 style={{
                                                     marginLeft: '20px'

@@ -1,5 +1,4 @@
 import React from "react";
-import { CloseOutlined } from "@ant-design/icons";
 import dino1 from "./images/result/dino/dino1.png";
 import dino2 from "./images/result/dino/dino2.png";
 import dino3 from "./images/result/dino/dino3.png";
@@ -22,7 +21,6 @@ const Modal = (props) => {
         >
           <div className="modalHead">
             <div className="modalHeadFont">전체 유형 보기</div>
-            <CloseOutlined className="closeBtn" onClick={handleCloseBtn} />
           </div>
           <div className="modalCon">
             <img src={dino1} width="210px" height="180px" alt="img"></img>
