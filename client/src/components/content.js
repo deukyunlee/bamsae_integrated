@@ -9,6 +9,7 @@ import Service_Center from "./service_center"
 import MovieDetail from "./movie_/movie_detail"
 import Login from "./login"
 import Signup from "../signup"
+import Mbti from "./mbti"
 
 class Content extends Component {
   render() {
@@ -22,6 +23,8 @@ class Content extends Component {
       return <Reserve is_logined={this.props.is_logined} onChangePage={this.props.onChangePage}></Reserve>
     } else if (this.props.page === "store") {
       return <Store></Store>
+    }else if (this.props.page === "mbti") {
+      return  <Mbti></Mbti>
     } else if (this.props.page === "mypage") {
         return <MyPage username={this.props.username} inquiry_data={this.props.inquiry_data} onChangePage={this.props.onChangePage}></ MyPage>
     } else if (this.props.page === "service") {
