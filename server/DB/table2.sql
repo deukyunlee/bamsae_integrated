@@ -16,5 +16,14 @@ INSERT INTO `theater2` (`theater_id`, `theater_name`, `theater_loc`, `theater_ad
 INSERT INTO `theater2` (`theater_id`, `theater_name`, `theater_loc`, `theater_address`, `theater_call`, `theater_info`) VALUES ('GS01', 'BS시네마 김천점', '경상', '경상북도 김천시 김천로74 한일빌딩4층', '1544-2912', '김천역 3분 거리의 김천 유일 멀티플렉스!');
 INSERT INTO `theater2` (`theater_id`, `theater_name`, `theater_loc`, `theater_address`, `theater_call`, `theater_info`) VALUES ('JR01', 'BS시네마 목포점', '전라', '전라남도 목포시 옥암로 95 (상동) 포르모큐브몰 3층', '1544-9802', '6채널 분리방식의 돌비 서라운드 음향시설을 보유한 전라도 최고의 멀티플렉스');
 
-
+ALTER TABLE `theater2` 
+ADD COLUMN `theater_seatnum` INT NULL AFTER `theater_info`;
+UPDATE `theater2` SET `theater_seatnum` = '874' WHERE (`theater_id` = 'SE01');
+UPDATE `theater2` SET `theater_seatnum` = '624' WHERE (`theater_id` = 'SE02');
+UPDATE `theater2` SET `theater_seatnum` = '526' WHERE (`theater_id` = 'BU01');
+UPDATE `theater2` SET `theater_seatnum` = '724' WHERE (`theater_id` = 'CC01');
+UPDATE `theater2` SET `theater_seatnum` = '1196' WHERE (`theater_id` = 'GG01');
+UPDATE `theater2` SET `theater_seatnum` = '553' WHERE (`theater_id` = 'GS01');
+UPDATE `theater2` SET `theater_seatnum` = '896' WHERE (`theater_id` = 'GW01');
+UPDATE `theater2` SET `theater_seatnum` = '326' WHERE (`theater_id` = 'JR01');
 
