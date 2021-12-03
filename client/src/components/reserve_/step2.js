@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Select_seat from './seat/select_seat';
+import axios from 'axios';
 
 class Step2 extends Component {
 	constructor(props) {
@@ -7,7 +8,48 @@ class Step2 extends Component {
 		this.state = {
 			filled : [],
 			theater_selected: false,
+			theaters: {},
+			region: "",
 		}
+	}
+
+	componentDidMount() {
+		this.updateTheaters();
+	}
+
+	updateTheaters = async () => {
+		var sort = {
+			'SE': [],
+			'GG': [],
+			'GW': [],
+			'BU': [],
+			'GS': [],
+			'CC': [],
+			'JR': [],
+			'JJ': [],
+		};
+		axios
+          .get("http://localhost:5000/theater")
+          .then((data_) => {
+            var arr = data_.data.data;
+			for (var i=0; i<arr.length; i++) {
+				var code = arr[i].theater_id.substr(0, 2);
+				sort[code].push(arr[i]);
+			}
+			this.setState({
+				theaters: sort,
+			});
+          }
+          )
+          .catch(e => {
+            console.error(e);
+          });
+	}
+
+	filterByRegion(regionCode) {
+		this.setState({
+			region: regionCode,
+		})
 	}
 
     checkAllItemsAreFilled(value) {
@@ -35,6 +77,7 @@ class Step2 extends Component {
         var items = this.props.selected_items; // arr
         var arr = []
         var names = []
+		var options = []
         for (const item of items) {
             arr.push(
                 <div class="movie-item-style-2">
@@ -48,6 +91,12 @@ class Step2 extends Component {
             );
             names.push(item.name + " ")
         }
+		if (this.state.region !== "") {
+			var filtered = this.state.theaters[this.state.region] // array
+			for (var i=0; i<filtered.length; i++) {
+				options.push(<option value={String(i)}>{filtered[i].theater_name}</option>)
+			}
+		}
         return (
             <div class="container">
                 <div class="col-md-16 col-sm-12 col-xs-12">
@@ -72,15 +121,17 @@ class Step2 extends Component {
 													arr.push(e.target.value)
 													this.setState({filled: arr})
 												}
+												this.filterByRegion(e.target.value);
 											}.bind(this)}>
 											<option value="">--지역을 선택하세요--</option>
-											<option value="seoul">서울</option>
-											<option value="gyeonggi">경기</option>
-											<option value="incheon">인천</option>
-											<option value="gangwon">강원</option>
-											<option value="daegu">대구/충청/세종</option>
-											<option value="busan">부산/대구/경상</option>
-											<option value="gwanju">광주/전라</option>
+											<option value="SE">서울</option>
+											<option value="GG">경기</option>
+											<option value="GW">강원</option>
+											<option value="BU">부산</option>
+											<option value="GS">경상</option>
+											<option value="JR">전라</option>
+											<option value="CC">충청</option>
+											<option value="JJ">제주</option>
 										</select>
 									</div>
 									
@@ -96,9 +147,9 @@ class Step2 extends Component {
 												this.setState({filled: arr})
 											}
 										}.bind(this)}>
+
 									 	<option value="">-- 영화관을 선택하세요 --</option>
-										<option value="gangnam">강남점</option>
-										<option value="itaewon">이태원점</option>
+										{options}
 									</select>
 									
 								</div>

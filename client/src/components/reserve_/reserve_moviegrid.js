@@ -11,8 +11,8 @@ class Reserve_Moviegrid extends Component {
     while (i < data.length) {
       arr.push(
         <Reserve_Movieitem
-          id={data[i].id}
-          name={data[i].name}
+          id={data[i].movie_id}
+          name={data[i].movie_title}
           addItem={this.props.addItem}
           removeItem={this.props.removeItem}
         ></Reserve_Movieitem>

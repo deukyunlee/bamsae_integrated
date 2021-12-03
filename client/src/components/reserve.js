@@ -4,6 +4,7 @@ import Step1 from "./reserve_/step1"
 import Step2 from "./reserve_/step2"
 import Step3 from "./reserve_/step3"
 import Step4 from "./reserve_/step4"
+import axios from 'axios';
 
 class Reserve extends Component {
   constructor(props) {
@@ -12,24 +13,29 @@ class Reserve extends Component {
       step1: false,
       step3: false,
       step4: false,
-      data: [
-        {
-          id: 0,
-          name: "이터널스",
-        },
-        {
-          id: 1,
-          name: "베놈2",
-        },
-        {
-          id: 2,
-          name: "어바웃타임",
-        },
-      ],
+      data: [],
       selected_items: [],
       selected_seats: [],
       ticket: [],
     }
+  }
+
+  componentDidMount() {
+    this.getItems();
+  }
+
+  getItems = async () => {
+    axios
+      .get("http://localhost:5000/movie/currentList")
+      .then((data_) => {
+        this.setState({
+          data : data_.data.data,
+        });
+      }
+      )
+      .catch(e => {
+        console.error(e);
+      });
   }
 
   render() {
