@@ -1,29 +1,52 @@
-import React, { Component } from "react"
-import MovieGrid from "./movie_/movie_grid"
+import React, { Component } from "react";
+import MovieGrid from "./movie_/movie_grid";
+import axios from 'axios';
 
 class Movie extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      loading: false,
       data: [
-        {
-          id: 0,
-          name: "이터널스",
-          rate: 9.5,
-        },
-        {
-          id: 1,
-          name: "베놈2",
-          rate: 9.2,
-        },
-        {
-          id: 2,
-          name: "어바웃타임",
-          rate: 9.3,
-        },
+        // {
+        //   id: 0,
+        //   name: "이터널스",
+        //   rate: 9.5,
+        // },
+        // {
+        //   id: 1,
+        //   name: "베놈2",
+        //   rate: 9.2,
+        // },
+        // {
+        //   id: 2,
+        //   name: "어바웃타임",
+        //   rate: 9.3,
+        // },
       ],
-    }
+    };
   }
+
+  // componentDidMount() {
+  //   this.loadItem();
+  // }
+
+  // loadItem = async () => {
+  //   axios
+  //     .get("http://localhost:5000/movie/currentList")
+  //     .then(({data_}) => {
+  //       this.setState({
+  //         data : data_[0]
+  //       });
+  //     }
+  //     )
+  //     .catch(e => {
+  //       console.error(e);
+  //       this.setState({
+  //         loading: false,
+  //       });
+  //     });
+  // };
 
   render() {
     return (
