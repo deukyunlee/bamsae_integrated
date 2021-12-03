@@ -1,16 +1,16 @@
-INSERT INTO `member` (`mem_id`, `mem_pw`, `mem_lv`, `mem_name`, `mem_phone`, `mem_email`, `mem_birth`, `mem_gender`, `mem_city`, `mem_address`, `mem_point`, `mem_join`) VALUES ('baethwjd', '12345678b!', '1', '배소정', '010-9547-9798', 'baethwjd@naver.com', '2001-05-04', '1', '경기도 안산시 상록구', '한양대학로55', '0', '2015-12-02');
+INSERT INTO `member` (`mem_id`, `mem_pw`, `mem_lv`, `mem_name`, `mem_phone`, `mem_email`, `mem_birth`, `mem_gender`, `mem_city`, `mem_address`, `mem_point`, `mem_join`) VALUES ('baethwjd', '12345678b!', '1', '배소정', '010-9547-9798', 'baethwjd@naver.com', '2001-05-04', '1', '경기 안산시 상록구', '한양대학로55', '0', '2015-12-02');
 
 UPDATE `movie` SET `movie_title` = '듄', `movie_summary` = '.', `movie_pre` = '.', `movie_type` = '.' WHERE (`movie_id` = '2');
 UPDATE `movie` SET `movie_summary` = '.', `movie_pre` = '.', `movie_type` = '.' WHERE (`movie_id` = '1');
-INSERT INTO `movie` (`movie_id`, `movie_title`, `movie_summary`, `movie_pre`, `movie_type`) VALUES ('3', '장르만 로맨스', '.', '.', '.');
-INSERT INTO `movie` (`movie_id`, `movie_title`, `movie_summary`, `movie_pre`, `movie_type`) VALUES ('4', '디어 에반 헨슨', '.', '.', '..');
-INSERT INTO `movie` (`movie_id`, `movie_title`, `movie_summary`, `movie_pre`, `movie_type`) VALUES ('5', '프렌치 디스패치', '.', '.', '.');
-INSERT INTO `movie` (`movie_id`, `movie_title`, `movie_summary`, `movie_pre`, `movie_type`) VALUES ('6', '유체이탈자', '.', '.', '.');
-INSERT INTO `movie` (`movie_id`, `movie_title`, `movie_summary`, `movie_pre`, `movie_type`) VALUES ('7', '연애 빠진 로맨스', '.', '.', '.');
-INSERT INTO `movie` (`movie_id`, `movie_title`, `movie_summary`, `movie_pre`, `movie_type`) VALUES ('8', '엔칸토:마법의세계', '.', '.', '.');
-INSERT INTO `movie` (`movie_id`, `movie_title`, `movie_summary`, `movie_pre`, `movie_type`) VALUES ('9', '고스트버스터즈 라이즈', '.', '.', '.');
-INSERT INTO `movie` (`movie_id`, `movie_title`, `movie_summary`, `movie_pre`, `movie_type`) VALUES ('10', '라스트 나잇 인 소호', '.', '.', '.');
-INSERT INTO `movie` (`movie_id`, `movie_title`, `movie_summary`, `movie_pre`, `movie_type`) VALUES ('11', '태일이', '.', '.', '.');
+INSERT INTO `movie` (`movie_id`, `movie_title`, `movie_summary`, `movie_pre`, `movie_type`, `movie_release`) VALUES ('3', '장르만 로맨스', '.', '.', '.', '2021-11-29');
+INSERT INTO `movie` (`movie_id`, `movie_title`, `movie_summary`, `movie_pre`, `movie_type`, `movie_release`) VALUES ('4', '디어 에반 헨슨', '.', '.', '..', '2021-11-29');
+INSERT INTO `movie` (`movie_id`, `movie_title`, `movie_summary`, `movie_pre`, `movie_type`, `movie_release`) VALUES ('5', '프렌치 디스패치', '.', '.', '.', '2021-11-29');
+INSERT INTO `movie` (`movie_id`, `movie_title`, `movie_summary`, `movie_pre`, `movie_type`, `movie_release`) VALUES ('6', '유체이탈자', '.', '.', '.', '2021-11-29');
+INSERT INTO `movie` (`movie_id`, `movie_title`, `movie_summary`, `movie_pre`, `movie_type`, `movie_release`) VALUES ('7', '연애 빠진 로맨스', '.', '.', '.', '2021-11-29');
+INSERT INTO `movie` (`movie_id`, `movie_title`, `movie_summary`, `movie_pre`, `movie_type`, `movie_release`) VALUES ('8', '엔칸토:마법의세계', '.', '.', '.', '2021-11-29');
+INSERT INTO `movie` (`movie_id`, `movie_title`, `movie_summary`, `movie_pre`, `movie_type`, `movie_release`) VALUES ('9', '고스트버스터즈 라이즈', '.', '.', '.', '2021-11-29');
+INSERT INTO `movie` (`movie_id`, `movie_title`, `movie_summary`, `movie_pre`, `movie_type`, `movie_release`) VALUES ('10', '라스트 나잇 인 소호', '.', '.', '.', '2021-11-29');
+INSERT INTO `movie` (`movie_id`, `movie_title`, `movie_summary`, `movie_pre`, `movie_type`, `movie_release`) VALUES ('11', '태일이', '.', '.', '.', '2021-11-29');
 
 INSERT INTO `wish` (`mem_id`, `movie_id`) VALUES ('baethwjd', '1');
 INSERT INTO `wish` (`mem_id`, `movie_id`) VALUES ('baethwjd', '2');
