@@ -18,15 +18,10 @@ router.get('/upcomingList', async (req, res) => {
 
 //���� ������ ��ȸ
 router.get('/currentList', async (req, res) => {
-    await db.query(`SELECT movie_id,movie_title,count(mem_id) FROM MOVIE natural join WISH
-    WHERE movie_release <= CURDATE() GROUP BY movie_id`, (err, data) => {
-        if (data.length <= 0) {
-            res.send({ "status": false });
-        } else {
-            res.send({ "status": true, "length": data.length, "data": data });
-        }
-
+    await db.query(`SELECT movie_id, movie_title FROM MOVIE WHERE movie_release GROUP BY movie_id`, (err, data) => {
+        res.send({ "status": true, "length": data.length, "data": data });
     });
+
 });
 
 //���������� ����ȸ
