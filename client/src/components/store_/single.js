@@ -56,7 +56,6 @@ class Single extends Component {
                                 <div class="tab-content">
                                     <div id="" class="tab active">
                                         <div class="row">
-                                            
                                             <div
                                                 style={{
                                                     margin: '20px',
@@ -64,15 +63,15 @@ class Single extends Component {
                                                 }}
                                                 class="col-md-8 col-sm-12 col-xs-12"
                                                 id="final-purchase">
-                                                
-                                                    <img src="images/003.png" height='200px' width='200px'></img>
+                                                <h2>상품 정보</h2>
+                                                    
                                                 <form
                                                     
                                                     style={{
                                                         margin: '50px'
                                                     }}
                                                     class="form-style-1">
-                                                    <h4>상품 정보</h4>
+                                                    <img src="images/003.png" height='200px' width='200px'></img>
                                                     <div class="row">
                                                         <div class="col-md-6 form-it">
                                                             <label>상품명</label>
@@ -96,10 +95,6 @@ class Single extends Component {
                                         </div>
 
                                         <div class="row">
-                                            <h2
-                                                style={{
-                                                    marginLeft: '20px'
-                                                }}>결제</h2>
                                             <div
                                                 style={{
                                                     margin: '20px',
@@ -107,6 +102,11 @@ class Single extends Component {
                                                 }}
                                                 class="col-md-8 col-sm-12 col-xs-12"
                                                 id="final-purchase">
+
+                                                <h2
+                                                    style={{
+                                                        marginLeft: '20px'
+                                                    }}>결제</h2>
                                                 <div class="title-hd-sm">
                                                     <h4>수량</h4>
                                                     <span>{this.state.number}</span>

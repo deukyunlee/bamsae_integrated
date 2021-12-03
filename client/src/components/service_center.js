@@ -46,7 +46,7 @@ class Service_center extends Component{
                                             tab: "FAQ",
                                             in_detail: false,
                                         });
-                                    }.bind(this)}>공지사항</a>
+                                    }.bind(this)}>FAQ</a>
                                 </li>                                
                                 <li>
                                     <a href="#overview" onClick={function(e){
