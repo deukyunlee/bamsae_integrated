@@ -10,7 +10,7 @@ class Sales extends Component {
   }
   render() {
     const stylebtn = {
-      width: "100px",
+      width: "120px",
     }
     return (
       <div>
