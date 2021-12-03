@@ -1,23 +1,35 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import axios from 'axios'
 
 class Signup extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            account: {
-                id: "",
-                password: "",
-            }
+            id: "",
+            password: "",
+            password2: "",
+            name: "",
+            email: "",
+            phone: "",
+            add1: "",
+            add2: "",
+            gender: "",
+            birth: ""
         };
     }
 
-    onHandlePWChange(value) {
+    inputChange = (e) => {
         this.setState({
-            account: {
-                id: this.state.account.id,
-                password: value,
-            }
-        });
+            [e.target.name]: e.target.value
+        })
+    }
+
+    join() {
+        axios({
+            method: "POST",
+            data: this.state,
+            url: 'http://localhost:5000/memJoin'
+        })
     }
 
     render() {
@@ -63,23 +75,23 @@ class Signup extends Component {
                                                 <div class="row">
                                                     <div class="col-md-6 form-it">
                                                         <label>이름</label>
-                                                        <input type="text" placeholder="이름 입력"></input>
+                                                        <input type="text" placeholder="이름 입력" name='name' onChange={this.inputChange} value={this.state.name}></input>
                                                     </div>
                                                     <div class="col-md-6 form-it">
                                                         <label>이메일</label>
-                                                        <input type="text" placeholder="이메일 입력"></input>
+                                                        <input type="text" placeholder="이메일 입력" name='email' onChange={this.inputChange} value={this.state.email}></input>
                                                     </div>
                                                     <br/>
                                                     <div class="row"></div>
                                                     <div class="col-md-12 form-it">
                                                         <label>핸드폰번호</label>
-                                                        <input type="text" placeholder="핸드폰번호 입력"></input>
+                                                        <input type="text" placeholder="핸드폰번호 입력" name='phone' onChange={this.inputChange} value={this.state.phone}></input>
                                                         <br/>
                                                     </div>
 
                                                     <div class="col-md-6 form-it">
                                                         <label>아이디</label>
-                                                        <input type="text" placeholder="6~12자리의 아이디를 입력해주세요."></input>
+                                                        <input type="text" placeholder="6~12자리의 아이디를 입력해주세요." name='id' onChange={this.inputChange} value={this.state.id}></input>
                                                     </div>
                                                     <div class="col-md-6 form-it">
                                                         <button
@@ -96,31 +108,60 @@ class Signup extends Component {
                                                         <input
                                                             type="password"
                                                             name="password"
-                                                            id="password-2"
                                                             placeholder="특수문자 포함 8~12자리를 입력해주세요."
                                                             pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
                                                             required="required"
-                                                            onChange={function (e) {
-                                                                this.onHandlePWChange(e.target.value);
-                                                            }.bind(this)}/>
+                                                            onChange={this.inputChange} value={this.state.password}/>
 
                                                     </label>
                                                     <label style={style_input} for="password-2">
                                                         비밀번호 확인:
                                                         <input
                                                             type="password"
-                                                            name="password"
-                                                            id="password-2"
+                                                            name="password2"
                                                             placeholder="비밀번호 확인"
                                                             pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
                                                             required="required"
-                                                            onChange={function (e) {
-                                                                this.onHandlePWChange(e.target.value);
-                                                            }.bind(this)}/>
-
+                                                            value={this.state.password2}
+                                                            onChange={this.inputChange}/>
                                                     </label>
 
                                                 </div>
+                                                <div class="row">
+                                                    <label style={style_input}>
+                                                        생년월일:
+                                                        <input
+                                                            type="date"
+                                                            name="birth"
+                                                            placeholder="생년월일을 입력해주세요"
+                                                            required="required"
+                                                            value={this.state.birth}
+                                                            onChange={this.inputChange} />
+                                                    </label>
+                                                </div>
+                                                <div class="row">
+                                                    <label style={style_input}>
+                                                        주소:
+                                                        <input
+                                                            type="text"
+                                                            name="add1"
+                                                            placeholder="주소를 입력해주세요."
+                                                            required="required"
+                                                            onChange={this.inputChange} value={this.state.add1} />
+
+                                                    </label>
+                                                    <label style={style_input} for="password-2">
+                                                        상세 주소:
+                                                        <input
+                                                            type="text"
+                                                            name="add2"
+                                                            placeholder="상세 주소를 입력해주세요"
+                                                            required="required"
+                                                            value={this.state.add2}
+                                                            onChange={this.inputChange} />
+                                                    </label>
+                                                </div>
+
                                                 <br/>
                                                 <div class="row">
                                                     <button
@@ -128,9 +169,10 @@ class Signup extends Component {
                                                         class="redbtn"
                                                         type="submit"
                                                         onClick={function (e) {
-                                                            e.preventDefault();
-                                                            this.onSubmitAccount();
-                                                        }.bind(this)}>회원가입</button>
+                                                            console.log(this.state)
+                                                            this.join()
+                                                        }.bind(this)}>
+                                                        회원가입</button>
                                                 </div>
                                             </form>
                                         </div>
