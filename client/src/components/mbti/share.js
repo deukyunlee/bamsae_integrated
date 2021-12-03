@@ -1,50 +1,43 @@
-import imgUrlIMG from "./images/kakaoBtnShare.png";
+import imgUrlIMG from "./images/kakaoBtnShare.png"
+import React from "react"
 
 const kakaoShare = () => {
-  window.Kakao.Link.sendDefault({
+  new window.Kakao.Link.sendDefault({
     objectType: "feed",
     content: {
-      title: "Catch Up! BSTI Å×½ºÆ®",
-      description: "BSTI Å×½ºÆ® ¹Þ°í ¿µÈ­º¸·¯ °¡ÀÚ!!",
+      title: "Catch Up! BSTI ï¿½×½ï¿½Æ®",
+      description: "BSTI ï¿½×½ï¿½Æ® ï¿½Þ°ï¿½ ï¿½ï¿½È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½!!",
       imageUrl: "https://i.ibb.co/CV1X2FB/for-Share-Ka-Kao.png",
       link: {
-        mobileWebUrl: "https://bit.ly/Ä³Ãë¾÷",
+        mobileWebUrl: "https://bit.ly/Ä³ï¿½ï¿½ï¿½",
       },
     },
     itemContent: {
       titleImageUrl: "https://i.ibb.co/GCyyWZk/logo-KAKAO.png",
-      titleImageText: "Ä³Ãë¾÷",
-      titleImageCategory: "Ã»³âÀÌ·ë",
+      titleImageText: "Ä³ï¿½ï¿½ï¿½",
+      titleImageCategory: "Ã»ï¿½ï¿½ï¿½Ì·ï¿½",
     },
     buttons: [
       {
-        title: "Å×½ºÆ® ÇÏ·¯ °¡±â",
+        title: "ï¿½×½ï¿½Æ® ï¿½Ï·ï¿½ ï¿½ï¿½ï¿½ï¿½",
         link: {
-          mobileWebUrl: "https://bit.ly/Ä³Ãë¾÷",
+          mobileWebUrl: "https://bit.ly/Ä³ï¿½ï¿½ï¿½",
         },
       },
     ],
-  });
-};
+  })
+}
 
 const twitterShare = () => {
-  var sendText = "Ä³Ãë¾÷! Áö±Ý ¹Ù·Î MDTI Å×½ºÆ® ÇÏ·¯°¡±â";
-  var sendUrl =
-    "https://catchup.shop/                                                         ";
-  var sendHashTag = "Ã»³âÀÌ·ë,Ä³Ä¡¾÷,MyDream,MDTI";
-  window.open(
-    "https://twitter.com/intent/tweet?text=" +
-      sendText +
-      "&url=" +
-      sendUrl +
-      "&hashtags=" +
-      sendHashTag
-  );
-};
+  var sendText = "Ä³ï¿½ï¿½ï¿½! ï¿½ï¿½ï¿½ï¿½ ï¿½Ù·ï¿½ MDTI ï¿½×½ï¿½Æ® ï¿½Ï·ï¿½ï¿½ï¿½ï¿½ï¿½"
+  var sendUrl = "https://catchup.shop/                                                         "
+  var sendHashTag = "Ã»ï¿½ï¿½ï¿½Ì·ï¿½,Ä³Ä¡ï¿½ï¿½,MyDream,MDTI"
+  window.open("https://twitter.com/intent/tweet?text=" + sendText + "&url=" + sendUrl + "&hashtags=" + sendHashTag)
+}
 
 const facebookShare = () => {
-  var sendUrl = "https://localhost:3000";
-  window.open("http://www.facebook.com/sharer/sharer.php?u=" + sendUrl);
-};
+  var sendUrl = "https://localhost:3000"
+  window.open("http://www.facebook.com/sharer/sharer.php?u=" + sendUrl)
+}
 
-export { kakaoShare, twitterShare, facebookShare };
+export { kakaoShare, twitterShare, facebookShare }
