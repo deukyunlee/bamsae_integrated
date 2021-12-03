@@ -12,6 +12,7 @@ class Frame extends Component {
             page: "main",
             username: "",
             inquiry_data: [],
+            movie_id: 0,
         }
     }
 
@@ -77,6 +78,13 @@ class Frame extends Component {
                 inquiry_data: arr,
             })
         }.bind(this)}
+        onChangeDetail={function(id){
+            this.setState({
+                page: "movie_detail",
+                movie_id : id,
+            })
+        }.bind(this)}
+        movie_id={this.state.movie_id}
     ></Content>
     <Footer></Footer>
     </div>

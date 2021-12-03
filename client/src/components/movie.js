@@ -8,45 +8,30 @@ class Movie extends Component {
     this.state = {
       loading: false,
       data: [
-        // {
-        //   id: 0,
-        //   name: "이터널스",
-        //   rate: 9.5,
-        // },
-        // {
-        //   id: 1,
-        //   name: "베놈2",
-        //   rate: 9.2,
-        // },
-        // {
-        //   id: 2,
-        //   name: "어바웃타임",
-        //   rate: 9.3,
-        // },
       ],
     };
   }
 
-  // componentDidMount() {
-  //   this.loadItem();
-  // }
+  componentDidMount() {
+    this.loadItem();
+  }
 
-  // loadItem = async () => {
-  //   axios
-  //     .get("http://localhost:5000/movie/currentList")
-  //     .then(({data_}) => {
-  //       this.setState({
-  //         data : data_[0]
-  //       });
-  //     }
-  //     )
-  //     .catch(e => {
-  //       console.error(e);
-  //       this.setState({
-  //         loading: false,
-  //       });
-  //     });
-  // };
+  loadItem = async () => {
+    axios
+      .get("http://localhost:5000/movie/currentList")
+      .then((data_) => {
+        this.setState({
+          data : data_.data,
+        });
+      }
+      )
+      .catch(e => {
+        console.error(e);
+        this.setState({
+          loading: false,
+        });
+      });
+  };
 
   render() {
     return (
@@ -91,7 +76,7 @@ class Movie extends Component {
                     <i class="ion-grid active"></i>
                   </a>
                 </div>
-                <MovieGrid data={this.state.data} onChangePage={this.props.onChangePage}></MovieGrid>
+                <MovieGrid data={this.state.data.data} onChangeDetail={this.props.onChangeDetail}></MovieGrid>
               </div>
             </div>
           </div>

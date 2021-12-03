@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import Movie_Content from "./movie_content"
+import axios from 'axios';
 
 class Movie_Detail extends Component {
   constructor(props) {
@@ -7,9 +8,40 @@ class Movie_Detail extends Component {
     this.state = {
       tab: "info",
       in_detail: false,
+      data: [],
     }
   }
+
+  componentDidMount() {
+    this.getItems();
+  }
+
+  getItems = async () => {
+    axios
+      .get("http://localhost:5000/movie/currentList")
+      .then((data_) => {
+        this.setState({
+          data : data_.data,
+        });
+      }
+      )
+      .catch(e => {
+        console.error(e);
+      });
+  }
+
   render() {
+    var list = this.state.data.data;
+    var item;
+    if (typeof list == "undefined") {
+      return (<div>없지롱</div>)
+    }
+    for (var i=0; i<list.length; i++) {
+      if (Number(list[i].movie_id) === this.props.movie_id) {
+        item = list[i];
+        break;
+      }
+    }
     return (
       <div class="buster-light">
         <div class="hero mv-single-hero"></div>
@@ -55,7 +87,7 @@ class Movie_Detail extends Component {
               <div class="col-md-8 col-sm-12 col-xs-12">
                 <div class="movie-single-ct main-content">
                   <h1 class="bd-hd">
-                    이터널스<span>2021</span>
+                    {item.movie_title}<span>2021</span>
                   </h1>
                   <div class="social-btn">
                     <a href="#" class="parent-btn">
