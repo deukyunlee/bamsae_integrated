@@ -6,6 +6,12 @@ import Step1 from "./step1"
 
 class Step4 extends Component {
   render() {
+    var adult = this.props.ticket[0].adult
+    var youth = this.props.ticket[0].youth
+    var children = this.props.ticket[0].children
+    var welfare = this.props.ticket[0].welfare
+    var number = adult + youth + children + welfare
+    var price = (adult + youth * 0.8 + children * 0.6 + welfare * 0.5) * 10000
     return (
       <div class="container">
         <div class="col-md-12 col-sm-12 col-xs-12">
@@ -61,8 +67,14 @@ class Step4 extends Component {
                 <img src="images/event_icon_payco_right_arrow.png" class="button_event_arrow"></img>
               </p>
             </div>
-
-            <a href="http://localhost:5000/kakaopay?order_id=2&mem_id=abc&item_name=popcorn&quantity=2&price=2000">
+            <a
+              href={
+                "http://localhost:5000/kakaopay?order_id=2&mem_id=abc&item_name=movie_ticket&quantity=" +
+                number +
+                "&price=" +
+                price
+              }
+            >
               <button class="button_step4" type="button">
                 <img src="images/payment_icon_yellow_large.png" />
               </button>
