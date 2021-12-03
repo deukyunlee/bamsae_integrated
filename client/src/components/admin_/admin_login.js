@@ -26,7 +26,7 @@ class Admin_login extends Component {
         });
     }
 
-    onHandleIPWChange(value) {
+    onHandlePWChange(value) {
         this.setState({
             account: {
                 id : this.state.account.id,
