@@ -10,7 +10,7 @@ class MovieItem extends Component {
             href="moviesingle.html"
             onClick={function (e) {
               e.preventDefault()
-              this.props.onChangePage("movie_detail")
+              this.props.onChangeDetail(this.props.id)
             }.bind(this)}
           >
             상세 정보 <i class="ion-android-arrow-dropright"></i>

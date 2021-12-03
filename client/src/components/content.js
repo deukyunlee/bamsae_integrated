@@ -16,7 +16,7 @@ class Content extends Component {
     if (this.props.page === "main") {
       return <Main_A></Main_A>
     } else if (this.props.page === "movie") {
-      return <Movie onChangePage={this.props.onChangePage}></Movie>
+      return <Movie onChangeDetail={this.props.onChangeDetail}></Movie>
     } else if (this.props.page === "theater") {
       return <Theater></Theater>
     } else if (this.props.page === "reserve") {
@@ -37,7 +37,7 @@ class Content extends Component {
         ></Service_Center>
       )
     } else if (this.props.page === "movie_detail") {
-      return <MovieDetail></MovieDetail>
+      return <MovieDetail movie_id={this.props.movie_id}></MovieDetail>
     } else if (this.props.page === "login") {
       return <Login loginSucess={this.props.loginSucess} onChangePage={this.props.onChangePage}></Login>
     } else if (this.props.page === "signup") {
