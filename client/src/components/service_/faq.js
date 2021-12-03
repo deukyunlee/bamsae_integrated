@@ -16,7 +16,7 @@ class Faq extends Component {
       {
         id: 1,
         name: "구매에 따른 적립금 혜택이 어떻게 되나요?",
-        date: "2021/10/20",
+        date: "2021/11/20",
         content: "구매시 결제금액의 5%가 적립됩니다.",
       },
       {
