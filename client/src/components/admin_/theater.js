@@ -1,4 +1,10 @@
 ﻿import React, { Component } from "react"
+import Board_table from '../service_/table/board_table';
+import Table from '@material-ui/core/Table';
+import TableHead from '@material-ui/core/TableHead';
+import TableBody from '@material-ui/core/TableBody';
+import TableRow from '@material-ui/core/TableRow';
+import TableCell from '@material-ui/core/TableCell';
 
 class Board extends Component {
     categoryChange(e) {
@@ -48,6 +54,35 @@ class Board extends Component {
             width: "200px",
             margin: "10px",
         }
+        const stylebtn2 = {
+            width: '50px',
+            float: 'right',
+        }
+        const stylebtn3 = {
+            width: '50px',
+            float: 'right',
+            marginRight: '20px'
+        }
+        const board = [
+            {
+                'id': 1,
+                'name': '극장 이용가능 시간 안내',
+                'date': '2021.11.08',
+                'content': '정부 방역 지침 준수를 위해 BS시네마 강남점은 오후 10시까지 이용가능합니다. 협조 부탁드리며 감사합니다.'
+            }, {
+                'id': 2,
+                'name': '대관 관련 안내',
+                'date': '2021.11.25',
+                'content': 'BS시네마 강남점은 방역 지침 준수를 위해 11.31까지 대관이 불가능하오니 참고바랍니다.'
+            }, {
+                'id': 3,
+                'name': '강남점 특별 이벤트',
+                'date': '2021.12.6',
+                'content': 'BS시네마 강남점에서만 열리는 특별한 이벤트!',
+                'content2': "12.31까지 BS시네마 강남점을 이용해주시는 고객님들께 추가 포인트 적립 10%를 제공합니다. 많은 이용 부탁드립니다."
+            },
+        ]
+
         return (
             <div>
                 <div class="tab-content">
@@ -119,11 +154,58 @@ class Board extends Component {
                                                     </div>
                                                 </form>
                                             </div>
+                                            <div class="flex-wrap-movielist mv-grid-fw"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-
-                                            <br></br>
+                        <div class="row">
+                            <div class="col-md-8 col-sm-12 col-xs-12">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
                                             <h5>극장 게시판</h5>
-
+                                            <button style={stylebtn3}>삭제</button>
+                                            <button style={stylebtn2}>추가</button><br></br>
+                                            <div>
+                                                <br />
+                                                <div>
+                                                    <Table>
+                                                        <TableHead>
+                                                            <TableRow>
+                                                                <TableCell
+                                                                    style={{
+                                                                        width: 50,
+                                                                        textAlign: "center",
+                                                                    }}>번호</TableCell>
+                                                                <TableCell
+                                                                    style={{
+                                                                        width: 700,
+                                                                        textAlign: "center",
+                                                                    }}>제목</TableCell>
+                                                                <TableCell
+                                                                    style={{
+                                                                        width: 200,
+                                                                        textAlign: "center"
+                                                                    }}
+                                                                    align="right">게시일</TableCell>
+                                                            </TableRow>
+                                                        </TableHead>
+                                                        <TableBody>
+                                                            {
+                                                                board.map(c => {
+                                                                    return <Board_table key={c.id} id={c.id} name={c.name} date={c.date} onChangeDetail={this.props.onChangeDetail} getData={function () {
+                                                                        this.props.upData(board);
+                                                                    }.bind(this)
+                                                                    } />
+                                                                })
+                                                            }
+                                                        </TableBody>
+                                                    </Table>
+                                                </div>
+                                            </div>
                                             <div class="flex-wrap-movielist mv-grid-fw"></div>
                                         </div>
                                     </div>
