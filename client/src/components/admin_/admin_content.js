@@ -13,7 +13,7 @@ import Commuting from './commuting';
 class Admin_content extends Component {
     render() {
       if (this.props.tab === "theater") {
-            return <Theater></Theater>
+          return <Theater onChangeDetail={this.props.onChangeDetail}></Theater>
       }else if (this.props.tab === "sales") {
           return <Sales onChangeDetail={this.props.onChangeDetail}></Sales>
       } else if (this.props.tab === "employee") {

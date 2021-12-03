@@ -12,6 +12,11 @@ class Admin extends Component {
         };
     }
 
+    tabChange(str) {
+        let x = document.getElementsByClassName("now")[0];
+        x.innerText = str;
+    }
+
     render() {
         const style_input={
             width: '450px',
@@ -34,7 +39,7 @@ class Admin extends Component {
                                             </li>
                                             <li>
                                                 <span class="ion-ios-arrow-right"></span>
-                                                관리자</li>
+                                                <span class='now'>극장 관리</span></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -54,7 +59,8 @@ class Admin extends Component {
                                     href="#overview"
                                     onClick={function (e) {
                                         e.preventDefault();
-                                        this.setState({tab: "theater", in_detail: false});
+                                        this.setState({ tab: "theater", in_detail: false });
+                                        this.tabChange("극장 관리")
                                     }.bind(this)}>극장 관리</a>
                             </li>
                             <li>
@@ -62,7 +68,8 @@ class Admin extends Component {
                                     href="#overview"
                                     onClick={function (e) {
                                         e.preventDefault();
-                                        this.setState({tab: "sales", in_detail: false});
+                                        this.setState({ tab: "sales", in_detail: false });
+                                        this.tabChange("매출 현황")
                                     }.bind(this)}>매출 현황</a>
                             </li>
                             <li>
@@ -70,7 +77,8 @@ class Admin extends Component {
                                     href="#overview"
                                     onClick={function (e) {
                                         e.preventDefault();
-                                        this.setState({tab: "employee", in_detail: false});
+                                        this.setState({ tab: "employee", in_detail: false });
+                                        this.tabChange("직원 관리")
                                     }.bind(this)}>직원 관리</a>
                             </li>
                             <li>
@@ -78,7 +86,8 @@ class Admin extends Component {
                                     href="#overview"
                                     onClick={function (e) {
                                         e.preventDefault();
-                                        this.setState({tab: "board", in_detail: false});
+                                        this.setState({ tab: "board", in_detail: false });
+                                        this.tabChange("게시판 관리")
                                     }.bind(this)}>게시판 관리</a>
                             </li>
                             <li>
@@ -86,7 +95,8 @@ class Admin extends Component {
                                     href="#overview"
                                     onClick={function (e) {
                                         e.preventDefault();
-                                        this.setState({tab: "movie", in_detail: false});
+                                        this.setState({ tab: "movie", in_detail: false });
+                                        this.tabChange("영화 정보 관리")
                                     }.bind(this)}>영화 정보 관리</a>
                             </li>
                             <li>
@@ -94,7 +104,8 @@ class Admin extends Component {
                                     href="#overview"
                                     onClick={function (e) {
                                         e.preventDefault();
-                                        this.setState({tab: "product", in_detail: false});
+                                        this.setState({ tab: "product", in_detail: false });
+                                        this.tabChange("상품 관리")
                                     }.bind(this)}>상품 관리</a>
                             </li>
                         </ul>
