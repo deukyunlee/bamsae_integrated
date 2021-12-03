@@ -26,6 +26,15 @@ class Admin_login extends Component {
         });
     }
 
+    onHandleIPWChange(value) {
+        this.setState({
+            account: {
+                id : this.state.account.id,
+                password : value,
+            }
+        });
+    }
+
     onSubmitAccount = async () => {
         try {
             const user = await fetchLogin(this.state.account);
