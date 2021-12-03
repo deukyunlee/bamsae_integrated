@@ -14,35 +14,29 @@ import {
 
 const data = [
   {
-    name: '1분기',
+    name: '2020년 1분기',
     uv: 4000,
     pv: 2400,
     amt: 2400,
   },
   {
-    name: '2분기',
+    name: '2020년 2분기',
     uv: 3000,
     pv: 1398,
     amt: 2210,
   },
   {
-    name: '3분기',
+    name: '2020년 3분기',
     uv: 2000,
     pv: 9800,
     amt: 2290,
   },
   {
-    name: '4분기',
+    name: '2020년 4분기',
     uv: 2780,
     pv: 3908,
     amt: 2000,
-  },
-  {
-    name: '5분기',
-    uv: 2780,
-    pv: 3908,
-    amt: 2000,
-  },
+  }
  
 ];
 
@@ -53,7 +47,6 @@ export default class Chart3 extends PureComponent {
     return (
       <div style={{ width: '100%' }}>
         <br />
-
         <ResponsiveContainer width="200%" height={200}>
           <LineChart
             width={100}
@@ -67,6 +60,7 @@ export default class Chart3 extends PureComponent {
               bottom: 0,
             }}
           >
+            <title>순수익</title>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
             <YAxis />

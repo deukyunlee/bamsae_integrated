@@ -45,3 +45,4 @@ where qna_id = 1;
 update qna
 set contact_way = 2
 where qna_id = 2;
+

@@ -96,6 +96,12 @@ class Navbar extends Component {
                 /></a>
               </ul>
               <ul class="nav navbar-nav flex-child-menu menu-right">
+              <li><a 
+                onClick={function(e){
+                          e.preventDefault();
+                          this.props.onChangePage("mbti");
+                          window.scrollTo(0, 0);
+                    }.bind(this)}>MBTI</a></li>
                 <li><a 
                 onClick={function(e){
                           e.preventDefault();

@@ -6,8 +6,9 @@ const path = require("path")
 var db = require("../app.js")
 const url = require("url")
 const { query } = require("express")
-const adminKey = "e28e7f1cbe7c53635ac1286c3358ee89"
 
+require("dotenv").config()
+const adminKey = process.env.ADMIN_KEY
 router.get("/", function (req, res) {
   const queryData = url.parse(req.url, true).query
   console.log(queryData.item_name)

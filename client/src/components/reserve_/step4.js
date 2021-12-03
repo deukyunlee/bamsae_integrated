@@ -11,7 +11,7 @@ class Step4 extends Component {
     var children = this.props.ticket[0].children
     var welfare = this.props.ticket[0].welfare
     var number = adult + youth + children + welfare
-    var price = (adult + youth * 0.8 + children * 0.6 + welfare * 0.5) * 10000
+    var price = (adult * 1 + youth * 0.8 + children * 0.6 + welfare * 0.5) * 10000
     return (
       <div class="container">
         <div class="col-md-12 col-sm-12 col-xs-12">
@@ -67,6 +67,7 @@ class Step4 extends Component {
                 <img src="images/event_icon_payco_right_arrow.png" class="button_event_arrow"></img>
               </p>
             </div>
+
             <a
               href={
                 "http://localhost:5000/kakaopay?order_id=2&mem_id=abc&item_name=movie_ticket&quantity=" +
