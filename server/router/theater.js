@@ -3,10 +3,9 @@ const app = express();
 const router = express.Router();
 const db = require('../app.js')
 
-//극장 상세와 시간표 조회
+//극장 정보 조회
 router.get('/', async (req, res) => {
-    await db.query(`select  theater_id,audit_id,audit_no,audit_type,sched_id,movie_id,screen_beg,screen_fin 
-                    from theater natural join auditorium natural join schedule;`, (err, data) => {
+    await db.query(`SELECT * FROM theater2;`, (err, data) => {
         if(data==undefined){
             res.send({ "status": false});
         }else{
