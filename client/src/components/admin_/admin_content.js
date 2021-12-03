@@ -24,7 +24,7 @@ class Admin_content extends Component {
           return <All_chart onChangeDetail={this.props.onChangeDetail}></All_chart>
       } else if (this.props.tab === "other_place") {
           return <Other_place onChangeDetail={this.props.onChangeDetail}></Other_place>
-      } else if (this.props.tab === "pay") {
+      } else if (this.props.tab === "payment") {
           return <Pay onChangeDetail={this.props.onChangeDetail}></Pay>
       } else if (this.props.tab === "movie") {
           return <Movie></Movie>
