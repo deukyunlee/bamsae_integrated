@@ -3,60 +3,23 @@ const router = express.Router();
 var db = require('../app.js');
 
 
-// 회원가입 페이지 출력
-router.get('/', function (req, res) {
-    res.render('memJoin');
-})
+// 회원가입 처리
+router.post('/', function (req, res) {
+    const mem_id = req.body.id
+    const mem_pw = req.body.password
+    const mem_name = req.body.name
+    const mem_email = req.body.email
+    const mem_phone = req.body.phone
+    const mem_city = req.body.add1
+    const mem_address = req.body.add2
+    const mem_birth = req.body.birth
 
-
-// 회원가입 정보 받아오기
-router.post('/post-mem', function (req, res) {
-    // 유효한 가입 정보인지 확인
-    req.assert('mem_id', '아이디를 확인해주세요.').notEmpty()
-    req.assert('mem_pw', '비밀번호를 확인해주세요.').notEmpty()
-    req.assert('mem_pw2', '비밀번호 확인을 위해 한 번 더 입력해주세요.').notEmpty()
-    req.assert('email_id', '이메일 아이디를 입력해주세요.').notEmpty()
-    req.assert('email_domain', '이메일 도메인을 입력해주세요.').notEmpty()
-    req.assert('mem_name', '이름을 입력해주세요.').notEmpty()
-    req.assert('mem_birth', '성별을 선택해주세요.').notEmpty()
-    req.assert('mem_phone', '휴대폰 번호를 입력해주세요.').notEmpty()
-    req.assert('roadAddrPart1', '주소를 입력해주세요.').notEmpty()
-    req.assert('addrDetail', '상세 주소를 입력해주세요.').notEmpty()
-
-    var errors = req.validationErrors()
-
-    // 에러가 있다면 가입 거부
-    if (errors || !idCheck(req.body.mem_id) || !pwCheck(req.body.mem_pw)) {
-        var error_msg = ''
-        errors.forEach(function (error) {
-            error_msg += error.msg + '<br>'
-        })
-        req.flash('error', error_msg)
-        res.render('memJoin')
-    }
-    // 에러가 없다면 가입 처리
-    else {   
-        var mem_id = req.sanitize('mem_id').escape()
-        var mem_pw = req.sanitize('mem_pw').escape()
-        var mem_name = req.sanitize('mem_name').escape()
-        var mem_phone = req.sanitize('mem_phone').escape()
-        var mem_email = req.sanitize('email_id').escape()+'@'+ req.sanitize('email_domain').escape()
-        var mem_birth = req.sanitize('mem_birth').escape()
-        var mem_gender = req.sanitize('mem_gender').escape()
-        var mem_city = req.sanitize('roadAddrPart1').escape()
-        var mem_address = req.sanitize('addrDetail').escape()
-
-        db.query('INSERT INTO member VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, now());',
-            [mem_id, mem_pw, 1, mem_name, mem_phone, mem_email, mem_birth, mem_gender, mem_city, mem_address, 0], function (err, result) {
+    db.query('INSERT INTO member VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, now());',
+        [mem_id, mem_pw, 1, mem_name, mem_phone, mem_email, mem_birth, 0, mem_city, mem_address, 0], function (err, result) {
             if (err) {
                 console.log(err)
-                req.flash('error', err)
-                res.render('memJoin')
-            } else {
-                res.send("<script>alert('가입을 축하드립니다. 로그인 후 서비스를 이용해주세요.');location.href='/memLogin';</script>")
-            }
-        })
-    }
+            } 
+    })
 })
 
 

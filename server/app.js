@@ -9,8 +9,8 @@ const flash = require("express-flash")
 const session = require("express-session")
 const bodyParser = require("body-parser")
 
-const cors = require("cors")()
-app.use(cors)
+const cors = require("cors")
+app.use(cors({origin:true, credentials:true}))
 
 // .env에서 db 서버 credential 가져오기
 require("dotenv").config()

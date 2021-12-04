@@ -1,7 +1,8 @@
 import imgUrlIMG from "./images/kakaoBtnShare.png"
-import React from "react"
+import React, { useEffect } from "react"
 
 const kakaoShare = () => {
+  window.Kakao.init("926d02391a48cab481b16045e9af326d")
   new window.Kakao.Link.sendDefault({
     objectType: "feed",
     content: {

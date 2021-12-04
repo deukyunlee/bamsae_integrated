@@ -18,7 +18,6 @@ class Step3 extends Component {
         for (const i of temp) {
             sum += Number(i);
         }
-        alert(sum);
         if (sum > this.props.limit) {
             alert("좌석 수를 초과해서 선택할 수 없습니다.");
             return false;

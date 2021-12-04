@@ -5,7 +5,7 @@ class Reserve_Movieitem extends Component {
   render() {
     return (
       <div class="movie-item-style-2 movie-item-style-1">
-        <img src="images/uploads/mv1.jpg" alt="" />
+        <img src={"images/posters/" + this.props.id + ".jpg"} alt="" />
         <div class="mv-item-infor">
           <MovieItem_Check
             id={this.props.id}
