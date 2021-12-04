@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Admin_login from './admin_login';
 import Admin_content from './admin_content';
 
@@ -6,9 +6,9 @@ class Admin extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            is_logined : false,
+            is_logined: false,
             tab: "theater",
-            in_detail: false,
+            in_detail: false
         };
     }
 
@@ -18,7 +18,7 @@ class Admin extends Component {
     }
 
     render() {
-        const style_input={
+        const style_input = {
             width: '450px',
             margin: '20px'
         }
