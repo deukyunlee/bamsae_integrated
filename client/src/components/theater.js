@@ -10,23 +10,6 @@ class Theater extends Component {
             focus: "SE",
             selected_item: null,
             data: [],
-            schedule: [
-                {
-                    start_time: new Date(2021, 12, 1, 6, 0),
-                    movie_name: "이터널스",
-                    loc: 2,
-                },
-                {
-                    start_time: new Date(2021, 12, 1, 8, 30),
-                    movie_name: "듄",
-                    loc: 1,
-                },
-                {
-                    start_time: new Date(2021, 12, 1, 6, 0),
-                    movie_name: "유체이탈자",
-                    loc: 3,
-                }
-            ]
         }
     }
     
@@ -79,7 +62,7 @@ class Theater extends Component {
                     selected_item={this.state.selected_item}
                     handleChange={this.handleChange}
                     handleFocus={this.handleFocus}
-                    schedule={this.state.schedule}></Theater_Contents>
+                    ></Theater_Contents>
             </div>
         );
     }

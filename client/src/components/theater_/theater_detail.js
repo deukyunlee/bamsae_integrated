@@ -80,7 +80,7 @@ class Theater_detail extends Component {
 												</div>
 											</div>
 											<div class="schedule">
-												<p><Schedule schedule={this.props.schedule}></Schedule></p>
+												<p><Schedule theater_id={this.props.selected_item.theater_id} date={this.state.selected_date}></Schedule></p>
 											</div>
 										</div>
 						            </div>
