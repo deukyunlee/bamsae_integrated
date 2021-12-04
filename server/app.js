@@ -16,7 +16,7 @@ app.use(cors)
 require("dotenv").config()
 
 const db_host = process.env.db_host
-const db_user = process.env.db_user
+const db_user = process.env.db_username
 const db_password = process.env.db_password
 const db_database = process.env.db_database
 const db_port = process.env.db_port
@@ -25,11 +25,11 @@ const port = 5000
 // DB Connection 생성
 const db = mysql.createConnection({
   connectionlimit: 100,
-  host: db_host,
-  user: db_user,
-  password: db_password,
-  database: db_database,
-  port: db_port,
+  host: "localhost",
+  user: "test1",
+  password: "1234",
+  database: "bs_cinema",
+  port: 3306,
   multipleStatements: true,
 })
 
