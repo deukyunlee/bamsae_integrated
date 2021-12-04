@@ -26,7 +26,7 @@ const port = 5000
 const db = mysql.createConnection({
   connectionlimit: 100,
   host: "localhost",
-  user: "test1",
+  user: "test",
   password: "1234",
   database: "bs_cinema",
   port: 3306,
