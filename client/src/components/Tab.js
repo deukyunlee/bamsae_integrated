@@ -17,7 +17,7 @@ class Tabs extends Component {
           className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
           onClick={() => toggleTab(1)}
         >
-          팝콘/음료
+           팝콘/음료
         </button>
         <button
           className={toggleState === 2 ? "tabs active-tabs" : "tabs"}

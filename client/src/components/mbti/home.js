@@ -14,9 +14,6 @@ class Home extends Component {
     return (
         <>
           <Header isBack={false} />
-          <div className="home">
-            <b>Bam Sae</b> Type Indicator
-          </div>
     
           <img
           style={{marginLeft:"500px"}}

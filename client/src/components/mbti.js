@@ -18,14 +18,14 @@ class Mbti extends Component {
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="hero-ct">
-                                        <h1 width="100px">?뒪?넗?뼱</h1>
+                                        <h1 width="100px">B S T I</h1>
                                         <ul class="breadcumb">
                                             <li class="active">
-                                                <a href="#">?솃</a>
+                                                <a href="#">홈</a>
                                             </li>
                                             <li>
                                                 <span class="ion-ios-arrow-right"></span>
-                                                ?뒪?넗?뼱</li>
+                                                BSTI</li>
                                         </ul>
                                     </div>
                                 </div>

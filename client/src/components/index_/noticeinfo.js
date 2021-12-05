@@ -14,45 +14,138 @@ class NoticeInfo extends Component {
               <a href="#tab1">전체 공지</a>
             </li>
             <li>
-              <a href="#tab2"> 극장 공지</a>
+              <a href="#tab2"> 극장별 공지</a>
             </li>
           </ul>
           <div class="event-table">
-                    <table class="t">
-              <th>번호</th>
-              <th>극장</th>
-              <th>구분</th>
-              <th width='500px'>제목</th>
-              <th width='100px'>등록일</th>
-              <tr>
-                <td>1</td>
-                <td>강남</td>
-                <td>극장</td>
-                <td>극장 이용가능 시간 안내</td>
-                <td>2021.11.08</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>부산</td>
-                <td>극장</td>
-                <td>휴점 안내</td>
-                <td>2021.11.15</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>-</td>
-                <td>전체</td>
-                <td>방역지침 관련 안내드립니다.</td>
-                <td>2021.11.21</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>광교</td>
-                <td>극장</td>
-                <td>광교 개점 이벤트</td>
-                <td>2021.12.02</td>
-              </tr>
-            </table>
+          <table class="table" style={{ color: "white"}}>
+              <thead>
+                <tr>
+                  <th style={{textAlign:"center" }}>공지번호</th>
+                  <th style={{textAlign:"center" }}>구분</th>
+                  <th style={{width:"300px"}}>제목</th>
+                  <th style={{textAlign:"center" }}>등록일</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>
+                    <button class="btn btn-primary btn-sm">전체</button>
+                  </td>
+                  <td>극장 이용가능 시간 안내</td>
+                  <td>
+                    <span class="active-circle bg-success"></span> 2021.11.08
+                  </td>
+                  <td>
+                    <div class="dropdown open">
+                      <a href="#!" class="px-2" id="triggerId1" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <i class="fa fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="triggerId1">
+                        <a class="dropdown-item" href="#"><i class="fa fa-pencil mr-1"></i> Edit</a>
+                        <a class="dropdown-item text-danger" href="#"><i class="fa fa-trash mr-1"></i> Delete</a>
+                      </div>
+                    </div>
+                  </td>
+
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>
+                    <button class="btn btn-secondary btn-sm">극장</button>
+                  </td>
+                  <td>휴점 안내</td>
+                  <td>
+                    <span class="active-circle bg-success"></span> 2021.10.03
+                  </td>
+                  <td>
+                    <div class="dropdown open">
+                      <a href="#!" class="px-2" id="triggerId1" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <i class="fa fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="triggerId1">
+                        <a class="dropdown-item" href="#"><i class="fa fa-pencil mr-1"></i> Edit</a>
+                        <a class="dropdown-item text-danger" href="#"><i class="fa fa-trash mr-1"></i> Delete</a>
+                      </div>
+                    </div>
+                  </td>
+
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>
+                    <button class="btn btn-primary btn-sm">전체</button>
+                  </td>
+                  <td>방역지침 관련 안내드립니다.</td>
+                  <td>
+                    <span class="active-circle bg-success"></span> 2021.11.21
+                  </td>
+                  <td>
+                    <div class="dropdown open">
+                      <a href="#!" class="px-2" id="triggerId1" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <i class="fa fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="triggerId1">
+                        <a class="dropdown-item" href="#"><i class="fa fa-pencil mr-1"></i> Edit</a>
+                        <a class="dropdown-item text-danger" href="#"><i class="fa fa-trash mr-1"></i> Delete</a>
+                      </div>
+                    </div>
+                  </td>
+
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>
+                    <button class="btn btn-primary btn-sm">전체</button>
+                  </td>
+                  <td>극장 이용가능 시간 안내</td>
+                  <td>
+                    <span class="active-circle bg-success"></span> 2021.11.08
+                  </td>
+                  <td>
+                    <div class="dropdown open">
+                      <a href="#!" class="px-2" id="triggerId1" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <i class="fa fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="triggerId1">
+                        <a class="dropdown-item" href="#"><i class="fa fa-pencil mr-1"></i> Edit</a>
+                        <a class="dropdown-item text-danger" href="#"><i class="fa fa-trash mr-1"></i> Delete</a>
+                      </div>
+                    </div>
+                  </td>
+
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>
+                    <button class="btn btn-primary btn-sm">전체</button>
+                  </td>
+                  <td>극장 이용가능 시간 안내</td>
+                  <td>
+                    <span class="active-circle bg-success"></span> 2021.11.08
+                  </td>
+                  <td>
+                    <div class="dropdown open">
+                      <a href="#!" class="px-2" id="triggerId1" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <i class="fa fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="triggerId1">
+                        <a class="dropdown-item" href="#"><i class="fa fa-pencil mr-1"></i> Edit</a>
+                        <a class="dropdown-item text-danger" href="#"><i class="fa fa-trash mr-1"></i> Delete</a>
+                      </div>
+                    </div>
+                  </td>
+
+                </tr>
+              </tbody>
+            </table>       
           </div>
         </div>
         <div class="tab-content">
