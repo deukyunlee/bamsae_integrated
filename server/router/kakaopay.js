@@ -37,8 +37,8 @@ router.get("/", function (req, res) {
     partner_user_id: mem_id,
     item_name: item_name,
     quantity: quantity,
-    total_amount: quantity * price,
-    vat_amount: (quantity * price) / 10,
+    total_amount: price,
+    vat_amount: price / 10,
     tax_free_amount: "0",
     approval_url: `http://localhost:5000/paySuccess?order_id=${order_id}&mem_id=${mem_id}&item_name=${item_name}&quantity=${quantity}&price=${price}`, // localhost에 https 적용할 때 까지 임시로 사용
     fail_url: `http://localhost:5000/payFail?order_id=${order_id}&mem_id=${mem_id}&item_name=${item_name}&quantity=${quantity}&price=${price}`,

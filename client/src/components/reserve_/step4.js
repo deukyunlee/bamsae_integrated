@@ -6,12 +6,13 @@ import Step1 from "./step1"
 
 class Step4 extends Component {
   render() {
-    var adult = this.props.ticket[0].adult
-    var youth = this.props.ticket[0].youth
-    var children = this.props.ticket[0].children
-    var welfare = this.props.ticket[0].welfare
+    var adult = Number(this.props.ticket[0].adult)
+    var youth = Number(this.props.ticket[0].youth)
+    var children = Number(this.props.ticket[0].children)
+    var welfare = Number(this.props.ticket[0].welfare)
     var number = adult + youth + children + welfare
     var price = (adult * 1 + youth * 0.8 + children * 0.6 + welfare * 0.5) * 10000
+    // var price = adult * 1 + youth * 0.8 + children * 0.6 + welfare * 0.5
     return (
       <div class="container">
         <div class="col-md-12 col-sm-12 col-xs-12">
