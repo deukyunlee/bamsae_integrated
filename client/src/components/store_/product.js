@@ -71,7 +71,7 @@ class Product extends Component {
                             href="index.html"
                             onClick={function (e) {
                               e.preventDefault()
-                              this.props.onChangeTab("single");
+                              this.props.onChangeTab("single")
                             }.bind(this)}
                           >
                             구매하기
