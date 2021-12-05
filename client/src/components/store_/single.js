@@ -43,7 +43,7 @@ class Single extends Component {
 
   render() {
     var singleNumber = this.state.number
-    var singlePrice = singleNumber * 9000
+    var singlePrice = 9000
 
     return (
       <div>
