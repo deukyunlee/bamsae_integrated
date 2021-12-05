@@ -37,7 +37,7 @@ class Review extends Component {
                 </div>
                 <br />
                 <div class="mv-user-review-item">
-                  <h3>마동석 최고</h3>
+                  <h3>마블리 최고</h3>
                   <div class="no-star">
                     <i class="ion-android-star"></i>
                     <i class="ion-android-star"></i>
