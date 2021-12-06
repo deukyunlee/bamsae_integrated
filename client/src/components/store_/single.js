@@ -63,7 +63,7 @@ class Single extends Component {
     if (coupon == 1) {
       if (singleNumber === 0) singlePrice = 0
       else {
-        singlePrice = singleNumber * 9000 - 4000 + "원"
+        singlePrice = singleNumber * 9000 - 4000
         eventString = "(카카오페이 이벤트 : 4000원 할인 받으셨습니다.)" // 문구 수정
       }
     } else {
@@ -267,7 +267,7 @@ class Single extends Component {
                               textAlign: "center",
                             }}
                           >
-                            {singlePrice} <br /> {eventString}
+                            {singlePrice}원 <br /> {eventString}
                           </h3>
                           <br />
                           <div
