@@ -1,14 +1,27 @@
 import { Checkbox } from "@material-ui/core"
 import React, { Component } from "react"
 import { useState } from "react"
-
+import axios from "axios"
 class Single extends Component {
   constructor(props) {
     super(props)
     this.state = {
       checkedInputs: [],
       number: 0,
+      coupon: 0,
+      isLoading: true,
     }
+  }
+  getProduct = async () => {
+    const products = await axios.get("http://localhost:5000/paySuccess/coupon?mem_id=abc")
+    // alert(products.data.data)
+    // return Number(products.data)
+    await this.setState({
+      coupon: products.data.data,
+    })
+  }
+  componentDidMount() {
+    this.getProduct()
   }
   onIncrease() {
     this.setState({
@@ -43,7 +56,54 @@ class Single extends Component {
 
   render() {
     var singleNumber = this.state.number
-    var singlePrice = singleNumber * 9000
+    var coupon = this.state.coupon
+    var singlePrice = 0
+    var eventString = ""
+    console.log(coupon)
+    if (coupon == 1) {
+      if (singleNumber === 0) singlePrice = 0
+      else {
+        singlePrice = singleNumber * 9000 - 4000 + "원"
+        eventString = "(카카오페이 이벤트 : 4000원 할인 받으셨습니다.)" // 문구 수정
+      }
+    } else {
+      if (singleNumber === 0) singlePrice = 0
+      else singlePrice = singleNumber * 9000
+    }
+    // const App = async () => {
+    //   const user = Number(
+    //     await fetch("http://localhost:5000/paySuccess/coupon?mem_id=abc").then((response) => response.json())
+    //   )
+    //   return user
+    // }
+    // // App()
+    // var test = App().then((result) => {
+    //   return result
+    // })
+    // console.log(test)
+    // console.log(test)
+    // console.log(App().user + App().user)
+
+    //var singlePrice = singleNumber * 9000
+
+    // })
+    async function getProduct(singlePrice, singleNumber) {
+      let result = 0
+      result = await fetch("http://localhost:5000/paySuccess/coupon?mem_id=abc").then(function (res) {
+        return res.json()
+      })
+      //alert(result)
+
+      if (result == 1) singlePrice = singleNumber * 9000 - 4000
+      //alert(singlePrice)
+      return singlePrice
+    }
+    //getProduct(singlePrice, singleNumber)
+    // ;(async () => {
+    //   // alert(await getProduct(singlePrice, singleNumber))
+    //   singlePrice = await getProduct(singlePrice, singleNumber)
+    //   alert(singlePrice)
+    // })()
 
     return (
       <div>
@@ -207,7 +267,7 @@ class Single extends Component {
                               textAlign: "center",
                             }}
                           >
-                            {9000 * this.state.number}원
+                            {singlePrice} <br /> {eventString}
                           </h3>
                           <br />
                           <div

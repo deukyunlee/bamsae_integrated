@@ -53,6 +53,11 @@ class Step4 extends Component {
                   <label>좌석</label>
                   <p>{this.props.selected_seats.join(" , ")}</p>
                 </div>
+
+                <div class="col-md-6">
+                  <label>총 결제액</label>
+                  <p>{price}</p>
+                </div>
               </div>
             </form>
             <div>
