@@ -8565,3 +8565,15 @@ body {
 	display: inline-block;
 }
 
+.btn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}.bg-success {
+    background-color: #28a745!important;
+}
+.btn-secondary {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+}

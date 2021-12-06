@@ -22,24 +22,24 @@ class NoticeInfo extends Component {
               <thead>
                 <tr>
                   <th style={{textAlign:"center" }}>공지번호</th>
-                  <th style={{textAlign:"center" }}>구분</th>
-                  <th style={{width:"300px"}}>제목</th>
+                  <th>        구분</th>
+                  <th style={{width:"300px",textAlign:"center"}}>제목</th>
                   <th style={{textAlign:"center" }}>등록일</th>
                   <th></th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>1</td>
+                  <td style={{textAlign:"center" }}>1</td>
                   <td>
                     <button class="btn btn-primary btn-sm">전체</button>
                   </td>
-                  <td>극장 이용가능 시간 안내</td>
+                  <td style={{textAlign:"center" }}>극장 이용가능 시간 안내</td>
                   <td>
                     <span class="active-circle bg-success"></span> 2021.11.08
                   </td>
                   <td>
-                    <div class="dropdown open">
+                    <div class="dropdown ">
                       <a href="#!" class="px-2" id="triggerId1" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
                         <i class="fa fa-ellipsis-v"></i>
@@ -53,16 +53,16 @@ class NoticeInfo extends Component {
 
                 </tr>
                 <tr>
-                  <td>2</td>
+                  <td style={{textAlign:"center" }}>2</td>
                   <td>
                     <button class="btn btn-secondary btn-sm">극장</button>
                   </td>
-                  <td>휴점 안내</td>
+                  <td style={{textAlign:"center" }}>휴점 안내</td>
                   <td>
                     <span class="active-circle bg-success"></span> 2021.10.03
                   </td>
                   <td>
-                    <div class="dropdown open">
+                    <div class="dropdown ">
                       <a href="#!" class="px-2" id="triggerId1" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
                         <i class="fa fa-ellipsis-v"></i>
@@ -76,16 +76,16 @@ class NoticeInfo extends Component {
 
                 </tr>
                 <tr>
-                  <td>3</td>
+                  <td style={{textAlign:"center" }}>3</td>
                   <td>
                     <button class="btn btn-primary btn-sm">전체</button>
                   </td>
-                  <td>방역지침 관련 안내드립니다.</td>
+                  <td style={{textAlign:"center" }}>방역지침 관련 안내드립니다.</td>
                   <td>
                     <span class="active-circle bg-success"></span> 2021.11.21
                   </td>
                   <td>
-                    <div class="dropdown open">
+                    <div class="dropdown ">
                       <a href="#!" class="px-2" id="triggerId1" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
                         <i class="fa fa-ellipsis-v"></i>
@@ -99,16 +99,16 @@ class NoticeInfo extends Component {
 
                 </tr>
                 <tr>
-                  <td>4</td>
+                  <td style={{textAlign:"center" }}>4</td>
                   <td>
                     <button class="btn btn-primary btn-sm">전체</button>
                   </td>
-                  <td>극장 이용가능 시간 안내</td>
+                  <td style={{textAlign:"center" }}>극장 이용가능 시간 안내</td>
                   <td>
                     <span class="active-circle bg-success"></span> 2021.11.08
                   </td>
                   <td>
-                    <div class="dropdown open">
+                    <div class="dropdown ">
                       <a href="#!" class="px-2" id="triggerId1" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
                         <i class="fa fa-ellipsis-v"></i>
@@ -122,16 +122,16 @@ class NoticeInfo extends Component {
 
                 </tr>
                 <tr>
-                  <td>5</td>
+                  <td style={{textAlign:"center" }}>5</td>
                   <td>
                     <button class="btn btn-primary btn-sm">전체</button>
                   </td>
-                  <td>극장 이용가능 시간 안내</td>
+                  <td style={{textAlign:"center" }}>극장 이용가능 시간 안내</td>
                   <td>
                     <span class="active-circle bg-success"></span> 2021.11.08
                   </td>
                   <td>
-                    <div class="dropdown open">
+                    <div class="dropdown ">
                       <a href="#!" class="px-2" id="triggerId1" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
                         <i class="fa fa-ellipsis-v"></i>
