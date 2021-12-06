@@ -25,7 +25,7 @@ class Info_view extends Component {
           mem_name: res.data.mem_name,
           mem_email: res.data.mem_email,
           mem_phone: res.data.mem_phone,
-          mem_address: res.data.mem_city + res.data.mem_address,
+          mem_address: res.data.mem_city + ' ' + res.data.mem_address,
         },
       })
     })
