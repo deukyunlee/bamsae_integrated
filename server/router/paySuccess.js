@@ -25,7 +25,7 @@ router.get("/", function (req, res) {
       res.send(
         `${totalPrice * 0.05}만큼 포인트가 적립되었습니다. <script>alert(${
           totalPrice * 0.05
-        }+'포인트만큼 적립되었습니다. 결제가 완료되었습니다.');window.opener.location.href="http://localhost:3000";window.close();;
+        }+'포인트만큼 적립되었습니다. 결제가 완료되었습니다.');window.opener.location.href="http://localhost:3000";window.close();
         </script>`
       )
     // await res.redirect("/movieHistory")

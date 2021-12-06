@@ -82,7 +82,7 @@ class Single extends Component {
           singleNumber +
           "&price=" +
           singlePrice,
-        "a",
+        "카카오페이 결제",
         "width=500, height=500, left=100, top=50"
       )
     }
