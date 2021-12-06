@@ -46,7 +46,7 @@ class Product extends Component {
                         <img src="/images/004.png" alt="" />
                         <div class="hvr-inner">
                           <a
-                            href="index.html"
+                            href=""
                             onClick={function (e) {
                               e.preventDefault()
                               this.props.onChangeTab("single")

@@ -2,6 +2,7 @@ import { Checkbox } from "@material-ui/core"
 import React, { Component } from "react"
 import { useState } from "react"
 import axios from "axios"
+import { red } from "@material-ui/core/colors"
 class Single extends Component {
   constructor(props) {
     super(props)
@@ -64,7 +65,7 @@ class Single extends Component {
       if (singleNumber === 0) singlePrice = 0
       else {
         singlePrice = singleNumber * 9000 - 4000
-        eventString = "(카카오페이 이벤트 : 4000원 할인 받으셨습니다.)" // 문구 수정
+        eventString = "(카카오페이 이벤트 : 4000원 할인)" // 문구 수정
       }
     } else {
       if (singleNumber === 0) singlePrice = 0
@@ -267,8 +268,16 @@ class Single extends Component {
                               textAlign: "center",
                             }}
                           >
-                            {singlePrice}원 <br /> {eventString}
+                            {singlePrice}원 <br />
                           </h3>
+                          <h5
+                            style={{
+                              color: "red",
+                              textAlign: "center",
+                            }}
+                          >
+                            {eventString}
+                          </h5>
                           <br />
                           <div
                             style={{
