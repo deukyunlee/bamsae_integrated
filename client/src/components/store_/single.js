@@ -13,6 +13,9 @@ class Single extends Component {
       isLoading: true,
     }
   }
+  handleClick = (e) => {
+    e.preventDefault()
+  }
   getProduct = async () => {
     const products = await axios.get("http://localhost:5000/paySuccess/coupon?mem_id=abc")
     // alert(products.data.data)
@@ -38,6 +41,7 @@ class Single extends Component {
   setCheckedInputs(arr) {
     this.setState({ checkedInputs: arr })
   }
+
   changeHandler = (checked, id) => {
     if (checked) {
       this.setCheckedInputs([...this.state.checkedInputs, id])
@@ -70,6 +74,17 @@ class Single extends Component {
     } else {
       if (singleNumber === 0) singlePrice = 0
       else singlePrice = singleNumber * 9000
+    }
+
+    function showPopup(e) {
+      window.open(
+        "http://localhost:5000/kakaopay?order_id=2&mem_id=abc&item_name=single_set&quantity=" +
+          singleNumber +
+          "&price=" +
+          singlePrice,
+        "a",
+        "width=500, height=500, left=100, top=50"
+      )
     }
     // const App = async () => {
     //   const user = Number(
@@ -201,7 +216,6 @@ class Single extends Component {
                               할인쿠폰
                               <img src="images/event_icon_payco_right_arrow.png" class="button_event_arrow"></img>
                             </p>
-
                             <p>
                               <img src="images/payment_icon_yellow_large.png" class="button_nextto_paragraph" />
                               카카오페이 20000원 이상 결제시
@@ -209,19 +223,20 @@ class Single extends Component {
                               할인쿠폰
                               <img src="images/event_icon_payco_right_arrow.png" class="button_event_arrow"></img>
                             </p>
-                            <a
-                              href={
-                                "http://localhost:5000/kakaopay?order_id=2&mem_id=abc&item_name=single_set&quantity=" +
-                                singleNumber +
-                                "&price=" +
-                                singlePrice
-                              }
-                            >
-                              <button class="button_step4" type="button">
-                                <img src="images/payment_icon_yellow_large.png" />
-                              </button>
-                            </a>
 
+                            {/* <a href="javascript:windowopenPopup();" onclick={this.handleClick}> */}
+                            <button
+                              class="button_step4"
+                              type="button"
+                              onClick={(e) => {
+                                e.stopPropagation()
+
+                                showPopup()
+                              }}
+                            >
+                              <img src="images/payment_icon_yellow_large.png" />
+                            </button>
+                            {/* </a> */}
                             <button class="button_step4" type="button" onClick={function (e) {}}>
                               <img src="images/payment_icon_card.png" />
                             </button>
