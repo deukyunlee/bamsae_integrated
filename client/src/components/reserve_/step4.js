@@ -16,7 +16,7 @@ class Step4 extends Component {
 
     function showPopup(e) {
       window.open(
-        "http://localhost:5000/kakaopay?order_id=2&mem_id=abc&item_name=movie_ticket&quantity=" +
+        "http://localhost:5000/kakaopay?order_id=2&mem_id=baethwjd&item_name=movie_ticket&quantity=" +
           number +
           "&price=" +
           price,

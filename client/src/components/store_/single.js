@@ -17,7 +17,7 @@ class Single extends Component {
     e.preventDefault()
   }
   getProduct = async () => {
-    const products = await axios.get("http://localhost:5000/paySuccess/coupon?mem_id=abc")
+    const products = await axios.get("http://localhost:5000/paySuccess/coupon?mem_id=baethwjd")
     // alert(products.data.data)
     // return Number(products.data)
     await this.setState({
@@ -105,7 +105,7 @@ class Single extends Component {
     // })
     async function getProduct(singlePrice, singleNumber) {
       let result = 0
-      result = await fetch("http://localhost:5000/paySuccess/coupon?mem_id=abc").then(function (res) {
+      result = await fetch("http://localhost:5000/paySuccess/coupon?mem_id=baethwjd").then(function (res) {
         return res.json()
       })
       //alert(result)
