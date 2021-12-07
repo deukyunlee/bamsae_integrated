@@ -13,6 +13,17 @@ class Step4 extends Component {
     var number = adult + youth + children + welfare
     var price = (adult * 1 + youth * 0.8 + children * 0.6 + welfare * 0.5) * 10000
     // var price = adult * 1 + youth * 0.8 + children * 0.6 + welfare * 0.5
+
+    function showPopup(e) {
+      window.open(
+        "http://localhost:5000/kakaopay?order_id=2&mem_id=abc&item_name=movie_ticket&quantity=" +
+          number +
+          "&price=" +
+          price,
+        "카카오페이 결제",
+        "width=500, height=500, left=100, top=50"
+      )
+    }
     return (
       <div class="container">
         <div class="col-md-12 col-sm-12 col-xs-12">
@@ -74,18 +85,18 @@ class Step4 extends Component {
               </p>
             </div>
 
-            <a
-              href={
-                "http://localhost:5000/kakaopay?order_id=2&mem_id=abc&item_name=movie_ticket&quantity=" +
-                number +
-                "&price=" +
-                price
-              }
+            <button
+              class="button_step4"
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation()
+
+                showPopup()
+              }}
             >
-              <button class="button_step4" type="button">
-                <img src="images/payment_icon_yellow_large.png" />
-              </button>
-            </a>
+              <img src="images/payment_icon_yellow_large.png" />
+            </button>
+
             <button class="button_step4" type="button" onClick={function (e) {}}>
               <img src="images/payment_icon_card.png" />
             </button>
