@@ -101,7 +101,7 @@ class Navbar extends Component {
                           e.preventDefault();
                           this.props.onChangePage("mbti");
                           window.scrollTo(0, 0);
-                    }.bind(this)}>MBTI</a></li>
+                    }.bind(this)}>BSTI</a></li>
                 <li><a 
                 onClick={function(e){
                           e.preventDefault();
