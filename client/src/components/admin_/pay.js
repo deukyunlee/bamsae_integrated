@@ -31,32 +31,32 @@ class Pay extends Component {
                 'id': 1,
                 'sorting': '정직원',
                 'name': '배소정',
-                'hour': '',
-                'salary': ''
+                'hour': '82시간',
+                'salary': '169만원'
             }, {
                 'id': 2,
                 'sorting': '정직원',
                 'name': '손윤석',
-                'hour': '',
-                'salary': ''
+                'hour': '91시간',
+                'salary': '182만원'
             }, {
                 'id': 3,
                 'sorting': '정직원',
                 'name': '박지우',
-                'hour': '',
-                'salary': ''
+                'hour': '102시간',
+                'salary': '201만원'
             }, {
                 'id': 4,
                 'sorting': '정직원',
                 'name': '이득윤',
-                'hour': '',
-                'salary': ''
+                'hour': '71시간',
+                'salary': '152만원'
             }, {
                 'id': 4,
                 'sorting': '정직원',
                 'name': '이유진',
-                'hour': '',
-                'salary': ''
+                'hour': '68시간',
+                'salary': '148만원'
             }
         ]
         return (

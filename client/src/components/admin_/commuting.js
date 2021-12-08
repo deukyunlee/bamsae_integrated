@@ -22,31 +22,31 @@ class Commuting extends Component {
                 'id': 1,
                 'sorting': '정직원',
                 'name': '배소정',
-                'hour': '',
+                'hour': 'sojeong@bscinema.com',
                 'date': '2021/11/30'
             }, {
                 'id': 2,
                 'sorting': '정직원',
                 'name': '손윤석',
-                'hour': '',
+                'hour': 'yoonseok@bscinema.com',
                 'date': '2021/11/30'
             }, {
                 'id': 3,
                 'sorting': '정직원',
                 'name': '박지우',
-                'hour': '',
+                'hour': 'jiwoo@bscinema.com',
                 'date': '2021/11/30'
             }, {
                 'id': 4,
                 'sorting': '정직원',
                 'name': '이득윤',
-                'hour': '',
+                'hour': 'deukyoon@bscinema.com',
                 'date': '2021/11/30'
             }, {
                 'id': 4,
                 'sorting': '정직원',
                 'name': '이유진',
-                'hour': '',
+                'hour': 'yujin@bscinema.com',
                 'date': '2021/11/30'
             }
         ]
@@ -94,7 +94,7 @@ class Commuting extends Component {
                                     style={{
                                         width: 200,
                                         textAlign: "center"
-                                    }}>근무시간</TableCell>
+                                    }}>이메일</TableCell>
                                 <TableCell
                                     style={{
                                         width: 200,

@@ -160,7 +160,7 @@ class Step2 extends Component {
 									</form>
 								</div>
 								<div class="col-md-12 ">
-									<input class="submit" type="submit" value="submit" onClick={function(e){
+									<input class="submit" type="submit" value="선택" onClick={function(e){
                                         e.preventDefault();
 										if (this.checkLast())
                                         	this.setState({

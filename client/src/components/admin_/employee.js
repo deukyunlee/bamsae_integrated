@@ -22,7 +22,7 @@ class Employee extends Component {
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <h3>직원 관리</h3>
+                                            <h3>직원 정보</h3>
                                             <div class="flex-wrap-movielist mv-grid-fw"></div>
                                         </div>
                                     </div>
@@ -43,7 +43,7 @@ class Employee extends Component {
                                             e.preventDefault();
                                             this.setState({tab: "commuting", in_detail: false});
                                         }.bind(this)}>
-                                        <button style={stylebtn}>근무 관리</button>
+                                        <button style={stylebtn}>직원 정보</button>
                                     </a>
                                 </li>
                                 <li>
@@ -53,7 +53,7 @@ class Employee extends Component {
                                             e.preventDefault();
                                             this.setState({tab: "payment", in_detail: false});
                                         }.bind(this)}>
-                                        <button style={stylebtn}>급여관리</button>
+                                        <button style={stylebtn}>급여 관리</button>
                                     </a>
                                 </li>
                             </ul>

@@ -61,7 +61,7 @@ class Movie_Detail extends Component {
                       </div>
                       <div>
                         <a
-                          href="https://www.youtube.com/embed/o-0hcF97wy0"
+                          href="https://www.youtube.com/watch_popup?v=JGW4Ec2Hyhc"
                           class="item item-2 redbtn fancybox-media hvr-grow"
                         >
                           <i class="ion-play"></i>

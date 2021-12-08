@@ -69,7 +69,7 @@ class Step3 extends Component {
 									
 								</div>
 								<div class="col-md-12 ">
-									<input class="submit" type="submit" value="submit" onClick={function(e){
+									<input class="submit" type="submit" value="선택" onClick={function(e){
                                         e.preventDefault();
                                         if(this.countAll())
                                             this.props.toStep4();
