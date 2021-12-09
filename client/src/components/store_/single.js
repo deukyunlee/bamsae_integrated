@@ -110,7 +110,7 @@ class Single extends Component {
       })
       //alert(result)
 
-      if (result >= 1) singlePrice = singleNumber * 9000 - 4000
+      if (result == 1 || result > 1) singlePrice = singleNumber * 9000 - 4000
       //alert(singlePrice)
       return singlePrice
     }
