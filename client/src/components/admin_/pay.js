@@ -1,6 +1,6 @@
 import React, {Component} from "react"
 import axios from "axios"
-import Commuting_table from '../service_/table/commuting_table';
+import Pay_table from "../service_/table/pay_table";
 import Table from '@material-ui/core/Table';
 import TableHead from '@material-ui/core/TableHead';
 import TableBody from '@material-ui/core/TableBody';
@@ -32,31 +32,31 @@ class Pay extends Component {
                 'sorting': '정직원',
                 'name': '배소정',
                 'hour': '82시간',
-                'salary': '169만원'
+                'salary': '1,690,000'
             }, {
                 'id': 2,
                 'sorting': '정직원',
                 'name': '손윤석',
                 'hour': '91시간',
-                'salary': '182만원'
+                'salary': '1,820,000'
             }, {
                 'id': 3,
                 'sorting': '정직원',
                 'name': '박지우',
                 'hour': '102시간',
-                'salary': '201만원'
+                'salary': '2,010,000'
             }, {
                 'id': 4,
                 'sorting': '정직원',
                 'name': '이득윤',
                 'hour': '71시간',
-                'salary': '152만원'
+                'salary': '1,520,000'
             }, {
                 'id': 4,
                 'sorting': '정직원',
                 'name': '이유진',
                 'hour': '68시간',
-                'salary': '148만원'
+                'salary': '1,480,000'
             }
         ]
         return (
@@ -101,7 +101,7 @@ class Pay extends Component {
                         <TableBody>
                             {
                                 faq.map(c => {
-                                    return <Commuting_table
+                                    return <Pay_table
                                         key={c.id}
                                         id={c.id}
                                         sorting={c.sorting}

@@ -23,31 +23,36 @@ class Commuting extends Component {
                 'sorting': '정직원',
                 'name': '배소정',
                 'hour': 'sojeong@bscinema.com',
-                'date': '2021/11/30'
+                'date': '2021/11/30',
+                'phone' : '010-1234-5678'
             }, {
                 'id': 2,
                 'sorting': '정직원',
                 'name': '손윤석',
                 'hour': 'yoonseok@bscinema.com',
-                'date': '2021/11/30'
+                'date': '2021/11/30',
+                'phone' : '010-1243-5778'
             }, {
                 'id': 3,
                 'sorting': '정직원',
                 'name': '박지우',
                 'hour': 'jiwoo@bscinema.com',
-                'date': '2021/11/30'
+                'date': '2021/11/30',
+                'phone' : '010-1423-5778'
             }, {
                 'id': 4,
                 'sorting': '정직원',
                 'name': '이득윤',
                 'hour': 'deukyoon@bscinema.com',
-                'date': '2021/11/30'
+                'date': '2021/11/30',
+                'phone' : '010-1224-5578'
             }, {
-                'id': 4,
+                'id': 5,
                 'sorting': '정직원',
                 'name': '이유진',
                 'hour': 'yujin@bscinema.com',
-                'date': '2021/11/30'
+                'date': '2021/11/30',
+                'phone' : '010-4158-5678'
             }
         ]
         return (
@@ -101,6 +106,12 @@ class Commuting extends Component {
                                         textAlign: "center"
                                     }}
                                     align="right">입사일</TableCell>
+                                <TableCell
+                                    style={{
+                                        width: 200,
+                                        textAlign: "center"
+                                    }}
+                                    align="right">연락처</TableCell>
                             </TableRow>
                         </TableHead>
                         <TableBody>
@@ -113,6 +124,7 @@ class Commuting extends Component {
                                         name={c.name}
                                         hour={c.hour}
                                         date={c.date}
+                                        phone={c.phone}
                                         onChangeDetail={this.props.onChangeDetail}
                                         getData={function () {
                                             this

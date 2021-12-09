@@ -27,6 +27,10 @@ class Commuting_table extends Component {
                     style={{
                         textAlign: "center"
                     }}>{this.props.date}</TableCell>
+                    <TableCell
+                    style={{
+                        textAlign: "center"
+                    }}>{this.props.phone}</TableCell>
             </TableRow>
         )
     }

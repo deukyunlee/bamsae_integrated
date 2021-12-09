@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
 
-class Movie_chart extends Component {
+class Pay_table extends Component {
     render() {
 
         return (
@@ -11,27 +11,25 @@ class Movie_chart extends Component {
                     style={{
                         textAlign: "center"
                     }}>{this.props.id}</TableCell>
-                <TableCell><img src={this.props.image} alt="profile"/></TableCell>
-                <TableCell
+                     <TableCell
+                    style={{
+                        textAlign: "center"
+                    }}>{this.props.sorting}</TableCell>
+                     <TableCell
                     style={{
                         textAlign: "center"
                     }}>{this.props.name}</TableCell>
-                <TableCell
+                     <TableCell
                     style={{
                         textAlign: "center"
-                    }}>{this.props.date}</TableCell>
-                <TableCell
+                    }}>{this.props.hour}</TableCell>
+                    <TableCell
                     style={{
                         textAlign: "center"
-                    }}>{this.props.time}</TableCell>
-                <TableCell
-                    style={{
-                        textAlign: "center"
-                    }}>{this.props.age}</TableCell>
-
+                    }}>{this.props.salary}</TableCell>
             </TableRow>
         )
     }
 }
 
-export default Movie_chart;
+export default Pay_table;
