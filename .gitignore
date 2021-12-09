@@ -1,5 +1,5 @@
 .vs
 server/.env
-# node_modules/
-# node_modules/transformers/
+node_modules/
+node_modules/transformers/
 yarn.lock
