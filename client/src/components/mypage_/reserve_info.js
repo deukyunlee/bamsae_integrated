@@ -30,9 +30,9 @@ class Reserve_info extends Component {
               </h6>
             </div>
             <div class="reserve_info">
-              <h7>2021-12-21</h7>
-              <p>성인 2명</p>
-              <p>안산점 4관 C4 C5</p>
+              <h7>2021-12-6</h7>
+              <p>성인 2명 청소년 1명</p>
+              <p>안산점 4관 C4 C5 C6</p>
             </div>
           </div>
           <div class="movie-item-style-2 movie-item-style-1 style-3">
