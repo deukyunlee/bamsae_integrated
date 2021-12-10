@@ -65,7 +65,7 @@ class Single extends Component {
     var singlePrice = 0
     var eventString = ""
     console.log(coupon)
-    if (coupon == 1) {
+    if (coupon >= 1) {
       if (singleNumber === 0) singlePrice = 0
       else {
         singlePrice = singleNumber * 9000 - 4000
@@ -104,13 +104,13 @@ class Single extends Component {
 
     // })
     async function getProduct(singlePrice, singleNumber) {
-      let result = 0
+      var result = 0
       result = await fetch("http://localhost:5000/paySuccess/coupon?mem_id=baethwjd").then(function (res) {
         return res.json()
       })
       //alert(result)
 
-      if (result == 1 || result > 1) singlePrice = singleNumber * 9000 - 4000
+      if (result >= 1) singlePrice = singleNumber * 9000 - 4000
       //alert(singlePrice)
       return singlePrice
     }
