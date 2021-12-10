@@ -30,7 +30,7 @@ class Product extends Component {
            'id': 1,
            'sorting': '팝콘/음료',
            'name': '싱글콤보',
-           'price': 9000,
+           'price': '9000원',
            
        }, {
            'id': 2,

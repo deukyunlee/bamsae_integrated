@@ -109,8 +109,6 @@ class Signup extends Component {
                                                             type="password"
                                                             name="password"
                                                             placeholder="특수문자 포함 8~12자리를 입력해주세요."
-                                                            pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
-                                                            required="required"
                                                             onChange={this.inputChange} value={this.state.password}/>
 
                                                     </label>
@@ -120,8 +118,6 @@ class Signup extends Component {
                                                             type="password"
                                                             name="password2"
                                                             placeholder="비밀번호 확인"
-                                                            pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
-                                                            required="required"
                                                             value={this.state.password2}
                                                             onChange={this.inputChange}/>
                                                     </label>

@@ -24,7 +24,7 @@ class Commuting extends Component {
                 'name': '배소정',
                 'hour': 'sojeong@bscinema.com',
                 'date': '2021/11/30',
-                'phone' : '010-1234-5678'
+                'phone' : '010-9547-9798'
             }, {
                 'id': 2,
                 'sorting': '정직원',
